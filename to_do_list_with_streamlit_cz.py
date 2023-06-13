@@ -3,6 +3,8 @@ import to_do_list_functions_cz as funkce
 
 seznam_ukolu = funkce.ziskat_seznam_ukolu()
 
+st.set_page_config(layout='wide')
+
 
 def pridat_ukol():
     pridat = st.session_state['Nový úkol'] + '\n'
@@ -24,5 +26,3 @@ for index, ukol in enumerate(seznam_ukolu):
 
 st.text_input(label='', placeholder='Zadej nový úkol...',
               on_change=pridat_ukol, key='Nový úkol')
-
-st.session_state
