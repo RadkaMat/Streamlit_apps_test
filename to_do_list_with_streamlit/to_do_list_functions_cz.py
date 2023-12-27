@@ -1,3 +1,6 @@
+import streamlit as st
+from datetime import datetime
+
 CESTA = 'to_do_list_result_cz.txt'
 
 
@@ -15,3 +18,11 @@ def ulozit_seznam_ukolu(seznam_ukolux, cestax=CESTA):
     """ Funkce uloží proměnnou do souboru 'seznam_ukolu.txt'. """
     with open(cestax, mode='w', encoding='UTF-8') as souborx:
         souborx.writelines(seznam_ukolux)
+
+
+def pridat_ukol(seznam_ukolux):
+    """ Funkce přidá nový úkol do seznamu. """
+    pridat = st.session_state['Novy_ukol'] + ' ' + str(datetime.now())[:10] + '\n'
+    seznam_ukolux.append(pridat)
+    ulozit_seznam_ukolu(seznam_ukolux)
+    
