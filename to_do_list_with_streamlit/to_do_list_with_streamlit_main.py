@@ -12,7 +12,7 @@ def add_new_to_do():
     st.session_state.new_to_do_widget = ''
 
 
-to_do_list = functions.get_to_do_list()
+to_do_list = function.get_to_do_list()
 st.set_page_config(layout='wide')
 
 
