@@ -1,5 +1,5 @@
 import streamlit as st
-import to_do_list_functions_cz as funkce
+from to_do_list_with_streamlit import to_do_list_functions_cz as funkce
 
 seznam_ukolu = funkce.ziskat_seznam_ukolu()
 st.set_page_config(layout='wide')
