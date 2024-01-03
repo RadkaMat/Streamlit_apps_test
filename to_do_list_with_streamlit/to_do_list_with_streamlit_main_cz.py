@@ -11,11 +11,11 @@ with open('vystup_prikazu.txt', mode='r', encoding='UTF-8') as souborx:
         seznam_ukolux = souborx.readlines()
 st.write(seznam_ukolux)
 
-'''
+
 seznam_ukolu = funkce.ziskat_seznam_ukolu()
 st.set_page_config(layout='wide')
 
-
+'''
 # seznam úkolů k splnění
 st.title('Seznam úkolů &#9989;')
 
