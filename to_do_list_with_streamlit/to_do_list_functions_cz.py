@@ -1,7 +1,7 @@
 import streamlit as st
 from datetime import datetime
 
-CESTA = r'to_do_list_result_cz.txt'
+CESTA = r'to_do_list_with_streamlit/to_do_list_result_cz.txt'
 
 
 def ziskat_seznam_ukolu(cestax=CESTA):
