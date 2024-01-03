@@ -2,7 +2,10 @@ import streamlit as st
 import to_do_list_functions_cz as funkce
 import os
 
-st.text(os.system('pwd'))
+os.system('touch vystup_prikazu.txt')
+os.system('pwd > vystup_prikazu.txt')
+os.system('ls >> vystup_prikazu.txt')
+os.system('ls /mount/src/application_python/to_do_list_with_streamlit >> vystup_prikazu.txt')
 '''
 seznam_ukolu = funkce.ziskat_seznam_ukolu()
 st.set_page_config(layout='wide')
