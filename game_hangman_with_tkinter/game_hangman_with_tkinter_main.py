@@ -55,7 +55,7 @@ sacred_word = choice(random_words1)
 word_puzzle = ['_ '] * len(sacred_word)
 
 button_picture = PhotoImage(file='..\\pictures\\button.png')
-blue_button = Label(master=window, borderwidth=0, image=button_picture)
+blue_button = Label(master=window, borderwidth=0, image=button_picture, bg='#33C6D8')
 blue_button.place(x=195, y=6)
 
 lives_label = Label(master=window, text='Lives:', font='Arial 18', bg='#4dcfdc', height=1, width=11)
