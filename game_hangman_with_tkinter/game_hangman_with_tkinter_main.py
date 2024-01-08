@@ -2,15 +2,6 @@ from random import choice
 from tkinter import *
 from random_words import random_words1
 
-window = Tk()
-window.title('Game Hangman')
-window.geometry('608x342')
-window.iconphoto(False, PhotoImage(file='..\\pictures\\icon.png'))
-
-background_picture = PhotoImage(file='..\\pictures\\bg_meadow.png')
-background = Label(window, image=background_picture)
-background.place(x=0, y=0, relwidth=1, relheight=1)
-
 
 def print_user_quess(button):
     print_out['text'] = button
@@ -50,6 +41,15 @@ def game():
             end_game_label.place(x=355, y=120)
             lives_emoji.config(text=sacred_word, anchor='center')
 
+
+window = Tk()
+window.title('Game Hangman')
+window.geometry('608x342')
+window.iconphoto(False, PhotoImage(file='..\\pictures\\icon.png'))
+
+background_picture = PhotoImage(file='..\\pictures\\bg_meadow.png')
+background = Label(window, image=background_picture)
+background.place(x=0, y=0, relwidth=1, relheight=1)
 
 sacred_word = choice(random_words1)
 word_puzzle = ['_ '] * len(sacred_word)
