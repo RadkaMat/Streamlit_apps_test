@@ -1,5 +1,5 @@
 # hra maly osadnici
-import catan_dice_game_word_version_functions as fo
+import dice_game_catan_small/dice_game_catan_small_function as fo
 
 # seznam surovin
 drevo = '\U0001fab5'
