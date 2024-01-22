@@ -21,7 +21,7 @@ def get_color(difficulty):
         return "black"  # Default color
 
 
-def display_quiz(timer_min=116:
+def display_quiz(timer_min=116):
     score = 0
 
     # create a form
