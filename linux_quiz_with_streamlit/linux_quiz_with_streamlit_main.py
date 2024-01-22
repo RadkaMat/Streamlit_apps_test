@@ -69,10 +69,10 @@ def display_quiz(timer_min=116):
 st.image(r'linux_quiz_with_streamlit/Linux_image.jpg', width=620)
 st.image(r'linux_quiz_with_streamlit/Linux_image2.jpg', width=620)
 st.title('Linux knowledge quiz')
-score, submitted = display_quiz()
+score, submit_button = display_quiz()
 
 # display the score only after the user submits the quiz
-if submitted:
+if submit_button:
     st.write(f"Your scored {score} out of {len(quiz_data)} quistions.")
     min_score_perc = 70
     min_score = len(quiz_data)/100 * min_score_perc
