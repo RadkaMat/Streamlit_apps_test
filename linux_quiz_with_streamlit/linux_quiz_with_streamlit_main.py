@@ -1,6 +1,5 @@
 import streamlit as st
 import json
-import time
 
 
 # load quiz data
@@ -21,7 +20,7 @@ def get_color(difficulty):
         return "black"  # Default color
 
 
-def display_quiz(timer_min=116):
+def display_quiz():
     score = 0
 
     # create a form
@@ -51,16 +50,6 @@ def display_quiz(timer_min=116):
 
         # submit button to calculate the score
         submit_button = st.form_submit_button('Submit answers')
-
-    # set timer
-    timer = st.empty()
-    timer_sec = timer_min * 60
-    for secs in range(timer_sec, -1, -1):
-        mm, ss = secs // 60, secs % 60
-        timer.metric('Time left:', f"{mm:02d}:{ss:02d}")
-        time.sleep(1)
-    submit_button = True
-    st.write('Time limit exceeded! Quiz is automatically submitted.')
 
     return score, submit_button
 
