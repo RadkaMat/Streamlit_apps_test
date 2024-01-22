@@ -7,7 +7,7 @@
         "Answer C": "ls -l",
         "Answer D": "blkid",
         "Correct Answer": "blkid",
-        "Difficulty": "Easy"
+        "Difficulty": "Medium"
     },
     {
         "Question": "Linux file access control lists (ACLs) are \\_.",
@@ -27,7 +27,7 @@
         "Answer C": "ip -6 route show",
         "Answer D": "ip route show",
         "Correct Answer": "ip -6 route show",
-        "Difficulty": "Hard"
+        "Difficulty": "Medium"
     },
     {
         "Question": "What does this command string do?",
