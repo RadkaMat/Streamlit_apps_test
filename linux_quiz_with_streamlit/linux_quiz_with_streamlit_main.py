@@ -4,7 +4,7 @@ import time
 
 
 # load quiz data
-with open('aplikace_znalostni_kviz_linux_data.json', 'r') as file_to_read:
+with open(r'linux_quiz_with_streamlit/linux_quiz_data.json', 'r') as file_to_read:
     file_content = file_to_read.read()
 quiz_data = loads(file_content)
 
@@ -72,8 +72,8 @@ def display_quiz(time_limit=1):
 
 
 # display the image at the top, the quiz and get the score
-st.image('Linux_image.jpg', width=620)
-st.image('Linux_image2.jpg', width=620)
+st.image(r'linux_quiz_with_streamlit/Linux_image.jpg', width=620)
+st.image(r'linux_quiz_with_streamlit/Linux_image2.jpg', width=620)
 st.title('Linux knowledge quiz')
 score, submitted = display_quiz()
 
@@ -86,5 +86,5 @@ if submitted:
         st.write('🙂 Congratulation! You passed the exam.')
     else:
         st.write('😕 You failed the exam. You should learn more.')
-        st.image('Linux_Commands.png')
+        st.image(r'linux_quiz_with_streamlit/Linux_Commands.png')
       
