@@ -55,8 +55,7 @@ def display_quiz():
 
 
 # main(), display the image at the top, the quiz and get the score
-st.image(r'linux_quiz_with_streamlit/Linux_image.jpg', width=620)
-st.image(r'linux_quiz_with_streamlit/Linux_image2.jpg', width=620)
+st.image(r'linux_quiz_with_streamlit/Linux_image2.jpg')
 st.title('Linux knowledge quiz')
 score, submit_button = display_quiz()
 
