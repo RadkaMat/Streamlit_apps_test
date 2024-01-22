@@ -1,12 +1,12 @@
 import streamlit as st
-from json import loads
+import json
 import time
 
 
 # load quiz data
 with open(r'linux_quiz_with_streamlit/linux_quiz_data.json', 'r') as file_to_read:
     file_content = file_to_read.read()
-quiz_data = loads(file_content)
+quiz_data = json.loads(file_content)
 
 
 # Function to get color based on difficulty
@@ -16,16 +16,13 @@ def get_color(difficulty):
     elif difficulty.lower() == "medium":
         return "yellow"
     elif difficulty.lower() == "hard":
-        return "red"
+        return "orange"
     else:
         return "black"  # Default color
 
 
-def display_quiz(time_limit=1):
+def display_quiz(timer_min=116:
     score = 0
-
-    # Set the start time
-    start_time = time.time()
 
     # create a form
     with st.form('Linux question'):
@@ -55,23 +52,20 @@ def display_quiz(time_limit=1):
         # submit button to calculate the score
         submit_button = st.form_submit_button('Submit answers')
 
-    # Check the time elapsed
-    elapsed_time = time.time() - start_time
-    remaining_time = max(0, time_limit * 60 - elapsed_time)  # Calculate remaining time in seconds
-
-    # Display countdown timer
-    st.write(f"Time left: {int(remaining_time)} seconds")
-
-    if elapsed_time > (time_limit * 60):  # Convert time limit to seconds
-        st.warning(f"Time limit exceeded! Quiz automatically submitted.")
-        submit_button = True  # Automatically submit the quiz
-
-
+    # set timer
+    timer = st.empty()
+    timer_sec = timer_min * 60
+    for secs in range(timer_sec, -1, -1):
+        mm, ss = secs // 60, secs % 60
+        timer.metric('Time left:', f"{mm:02d}:{ss:02d}")
+        time.sleep(1)
+    submit_button = True
+    st.write('Time limit exceeded! Quiz is automatically submitted.')
 
     return score, submit_button
 
 
-# display the image at the top, the quiz and get the score
+# main(), display the image at the top, the quiz and get the score
 st.image(r'linux_quiz_with_streamlit/Linux_image.jpg', width=620)
 st.image(r'linux_quiz_with_streamlit/Linux_image2.jpg', width=620)
 st.title('Linux knowledge quiz')
