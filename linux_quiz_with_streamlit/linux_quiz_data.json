@@ -952,11 +952,11 @@
     {
         "Question": "Which Vim command writes your changes to the currently open file and quits the Vim editor?",
         "Bash script": "",
-        "Answer A": ":q!",
-        "Answer B": ":wq",
-        "Answer C": ":sq",
-        "Answer D": ":w",
-        "Correct Answer": ":wq",
+        "Answer A": "`:q!`",
+        "Answer B": "`:wq`",
+        "Answer C": "`:sq`",
+        "Answer D": "`:w`",
+        "Correct Answer": "`:wq`",
         "Difficulty": "Medium"
     },
     {
