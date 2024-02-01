@@ -10,6 +10,8 @@ def get_to_do_list(pathx=PATH):
     """
     with open(pathx, mode='r', encoding='UTF-8') as filex:
         to_do_listx = filex.readlines()
+        if to_do_listx[0] == '\n':
+            to_do_listx.remove('\n')
     return to_do_listx
 
 
