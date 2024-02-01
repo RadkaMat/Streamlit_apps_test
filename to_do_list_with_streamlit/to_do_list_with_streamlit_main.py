@@ -25,7 +25,7 @@ with form:
         checking_box = st.checkbox(to_do, key=to_do)
         if checking_box:
             to_do_list.pop(index)
-            functions.save_to_do_list(to_do_list)
+            function.save_to_do_list(to_do_list)
             st.experimental_rerun()
     confirm = form.form_submit_button('Done')
 
