@@ -44,4 +44,4 @@ st.write(f'Poslední přidaný úkol: {st.session_state.novy_ukol}')
 
 
 # kontrola: zobrazí všechny prvky streamlit aplikace
-st.session_state
+# st.session_state
