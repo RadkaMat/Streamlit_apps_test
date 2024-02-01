@@ -3,7 +3,7 @@ import to_do_list_functions as function
 from datetime import datetime
 
 
-def add_new_to_do():
+def add_new_to_do_on_change():
     """ Function adds new to-do to to-do list. """
     add_new_to_do = st.session_state['new_to_do_widget'] + ' ' + str(datetime.now())[:10] + '\n'
     to_do_list.append(add_new_to_do)
@@ -33,7 +33,7 @@ with form:
 # add new to-do
 st.title('New to-do +')
 st.text_input(label='Write new to-do:', value='', placeholder='Write new to-do... [for comfirmation press Enter key]',
-              on_change=add_new_to_do, key='new_to_do_widget')
+              on_change=add_new_to_do_on_change, key='new_to_do_widget')
 
 
 # clean new to-do widget
