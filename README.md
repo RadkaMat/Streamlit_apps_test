@@ -4,7 +4,13 @@
 
 </div>
 
-## My Python apps:
-
-1. **To-do list** - add, show and delete to-dos
-2. **Knowledge quiz** - test your Linux knoledge, medium level
+## My Python Apps:
+>
+1. **To-do List** - add, show and delete to-dos
+2. **Knowledge Quiz** - test your Linux knoledge, medium level
+>
+>
+> ## My Python Games:
+>
+1. **Bulls and Cows** - logic game with geussing 4-digit number
+2. **Hangman** - word game with guessing letters
