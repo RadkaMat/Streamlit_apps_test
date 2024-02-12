@@ -1,4 +1,4 @@
-![alt text]([https://github.com/RadkaMat/application_python/blob/master/to_do_list_with_streamlit/to_do_list_screenshot.PNG](https://github.com/RadkaMat/application_python/blob/master/python_picture.png)?raw=true)
+![alt text](https://github.com/RadkaMat/application_python/blob/master/python_picture.png)?raw=true)
 1. To-do list
 2. Knowledge quiz
 >
