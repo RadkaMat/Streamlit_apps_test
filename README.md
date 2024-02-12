@@ -1,5 +1,7 @@
 <div align="center">
+  
 ![Python](https://github.com/RadkaMat/application_python/blob/master/python_picture_small.png)
+  
 </div>
 
 ## My Python Apps:
@@ -8,8 +10,8 @@
 2. **Knowledge Quiz** - test your Linux knoledge, medium level
 <!-- Images on the same line -->
 <p align="center">
-  <img src="https://github.com/RadkaMat/application_python/blob/master/to_do_list_screenshot.PNG" width="100" />
-  <img src="https://github.com/RadkaMat/application_python/blob/master/knowledge_quiz_screenshot.PNG" width="100" />
+  <img src="https://github.com/RadkaMat/application_python/blob/master/to_do_list_screenshot.PNG" width="500" />
+  <img src="https://github.com/RadkaMat/application_python/blob/master/knowledge_quiz_screenshot.PNG" width="500" />
 </p> 
 >
 >
