@@ -32,7 +32,7 @@ def display_quiz():
             # Colorful question name using HTML formatting
             # st.write(f"<h5 style='color: {color};'> {question_data['Difficulty']} question</h5> {index + 1}. {question_data['Question']}",
             #         unsafe_allow_html=True)
-            st.write(question_data['Question'])
+            st.write(f"{index + 1}. question_data['Question']")
             st.write(question_data['Bash script'])
 
             # display options using radio buttons
