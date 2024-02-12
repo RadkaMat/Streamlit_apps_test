@@ -18,5 +18,5 @@
 ## Screenshots ""
 <p align="center">
   <img src="https://github.com/RadkaMat/application_python/blob/master/to_do_list_screenshot.PNG" width="500" />
-  <img src="https://github.com/RadkaMat/application_python/blob/master/knowledge_quiz_screenshot.PNG" width="500" />
+  <img src="https://github.com/RadkaMat/application_python/blob/master/knowledge_quiz_screenshot2.png" width="500" />
 </p> 
