@@ -1,6 +1,6 @@
 <div align="center">
 
-![Your Image Alt Text]("https://github.com/RadkaMat/application_python/blob/master/python_picture_small.png")
+![Python](https://github.com/RadkaMat/application_python/blob/master/python_picture_small.png)
 
 </div>
 
