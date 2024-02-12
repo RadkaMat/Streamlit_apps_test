@@ -27,11 +27,12 @@ def display_quiz():
     with st.form('Linux question'):
         for index, question_data in enumerate(quiz_data):
             # Get color based on difficulty
-            color = get_color(question_data['Difficulty'])
+            # color = get_color(question_data['Difficulty'])
 
             # Colorful question name using HTML formatting
-            st.write(f"<h5 style='color: {color};'> {question_data['Difficulty']} question</h5> {index + 1}. {question_data['Question']}",
-                     unsafe_allow_html=True)
+            # st.write(f"<h5 style='color: {color};'> {question_data['Difficulty']} question</h5> {index + 1}. {question_data['Question']}",
+            #         unsafe_allow_html=True)
+            st.write(question_data['Question'])
             st.write(question_data['Bash script'])
 
             # display options using radio buttons
