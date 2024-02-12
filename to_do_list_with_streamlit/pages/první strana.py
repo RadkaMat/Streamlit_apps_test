@@ -10,4 +10,5 @@ with open('vystup_prikazu.txt', mode='r', encoding='UTF-8') as souborx:
         seznam_ukolux = souborx.readlines()
 st.write(seznam_ukolux)
 
+st.write('Linux commands: touch, pwd and ls')
 st.write('První strana')
