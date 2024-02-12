@@ -8,14 +8,15 @@
 >
 1. **To-do List** - add, show and delete to-dos
 2. **Knowledge Quiz** - test your Linux knoledge, medium level
-<!-- Images on the same line -->
-<p align="center">
-  <img src="https://github.com/RadkaMat/application_python/blob/master/to_do_list_screenshot.PNG" width="500" />
-  <img src="https://github.com/RadkaMat/application_python/blob/master/knowledge_quiz_screenshot.PNG" width="500" />
-</p> 
 >
 >
 ## My Python Games:
 >
 1. **Bulls and Cows** - logic game with geussing 4-digit number
 2. **Hangman** - word game with guessing letters
+>
+## Screenshots ""
+<p align="center">
+  <img src="https://github.com/RadkaMat/application_python/blob/master/to_do_list_screenshot.PNG" width="500" />
+  <img src="https://github.com/RadkaMat/application_python/blob/master/knowledge_quiz_screenshot.PNG" width="500" />
+</p> 
