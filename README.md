@@ -7,9 +7,9 @@
 ## My Python Apps:
 >
 1. **To-do List** - add, show and delete to-dos
-> URL: https://applicationpython-deozyjfzehmnquevb8p9rk.streamlit.app/
-3. **Knowledge Quiz** - test your Linux knoledge, medium level
-> URL: https://applicationpython-i5yrp9zceytpl9uqxfjic3.streamlit.app/
+- URL: https://applicationpython-deozyjfzehmnquevb8p9rk.streamlit.app/
+2. **Knowledge Quiz** - test your Linux knoledge, medium level
+- URL: https://applicationpython-i5yrp9zceytpl9uqxfjic3.streamlit.app/
 >
 ## My Python Games:
 >
