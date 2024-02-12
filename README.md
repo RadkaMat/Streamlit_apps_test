@@ -9,5 +9,5 @@
 
 ![alt text](https://github.com/RadkaMat/application_python/blob/master/python_picture_small.png?raw=true)
 <p align="center">
-  <img width="460" height="300" src="https://github.com/RadkaMat/application_python/blob/master/python_picture_small.png">
+  <img src="https://github.com/RadkaMat/application_python/blob/master/python_picture_small.png">
 </p>
