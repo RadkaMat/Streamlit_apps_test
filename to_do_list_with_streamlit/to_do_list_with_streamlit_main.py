@@ -22,7 +22,7 @@ st.title('To-do list &#9989;')
 form = st.form('Checking form', clear_on_submit=True)
 with form:
     for index, to_do in enumerate(to_do_list):
-        checking_box = st.checkbox(to_do, key=to_do)
+        checking_box = st.checkbox(to_do, key=index)
         if checking_box:
             to_do_list.pop(index)
             function.save_to_do_list(to_do_list)
