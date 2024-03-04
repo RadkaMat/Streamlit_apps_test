@@ -6,10 +6,13 @@ from datetime import datetime
 def add_new_to_do_on_change():
     """ Function adds new to-do to to-do list. """
     add_new_to_do = st.session_state['new_to_do_widget'] + ' ' + str(datetime.now())[:10] + '\n'
-    to_do_list.append(add_new_to_do)
-    function.save_to_do_list(to_do_list)
-    st.session_state.new_to_do = st.session_state.new_to_do_widget
-    st.session_state.new_to_do_widget = ''
+    if add_new_to_do not in to_do_list:
+        to_do_list.append(add_new_to_do)
+        function.save_to_do_list(to_do_list)
+        st.session_state.new_to_do = st.session_state.new_to_do_widget
+        st.session_state.new_to_do_widget = ''
+    else:
+        st.write('The name for this To-do is already used. Please, rename it.')
 
 
 to_do_list = function.get_to_do_list()
