@@ -5,8 +5,8 @@ from datetime import datetime
 
 def add_new_to_do_on_change():
     """ Function adds new to-do to to-do list. """
-    if st.session_state['new_to_do_widget'] not in to_do_list:
-        add_new_to_do = st.session_state['new_to_do_widget'] + ' ' + str(datetime.now())[:10] + '\n'
+    add_new_to_do = st.session_state['new_to_do_widget'] + ' ' + str(datetime.now())[:10] + '\n'
+    if add_new_to_do not in to_do_list:
         to_do_list.append(add_new_to_do)
         function.save_to_do_list(to_do_list)
         st.session_state.new_to_do = st.session_state.new_to_do_widget
