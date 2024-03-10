@@ -44,4 +44,4 @@ st.write(f'The last added to-do: {st.session_state.new_to_do}')
 
 
 # check tha state of all variables
-st.session_state
+# st.session_state
