@@ -1,83 +1,83 @@
-import streamlist as st
-from random import randint
+import streamlit as st
+import random
 
 
-def create_sacret_number():
-  ''' Create sacred number like 1342. '''
-	while True:
-		sacred_word = str(randint(1000, 9999))
-		if len(set(sacred_word)) == 4:
-			break
-	return sacred_word
+# Function to initialize or reset the game
+def generate_secred_number():
+    """ Random number between 1023 and 9876 """
+    while True:
+        secred_number = str(random.randint(1023, 9876))
+        if len(set(secred_number)) == 4:
+            break
+    return secred_number
 
 
-def check_bulls_and_cows():
-	''' Checking number of bulls and cows in the player's tip. '''
-	bulls = []
-	cows = []
-	bulls_emoji = '🐂'
-	cows_emoji = '🐄'
-
-	for index, digit in enumerate(tip):
-		if digit in sacred_word and sacred_word[index] == tip[index]:
-			bulls.append(digit)
-		if digit in sacred_word and sacred_word[index] != tip[index]:
-			cows.append(digit)
-
-	if len(bulls) == 1:
-		bulls_count = 'bull'
-	else:
-		bulls_count = 'bulls'
-	if len(cows) == 1:
-		cows_count = 'cow'
-	else:
-		cows_count = 'cows'
-
-	return f"{len(bulls)} {bulls_count} {bulls_emoji*len(bulls)}, {len(cows)} {cows_count} {cows_emoji*len(cows)}"
+def reset_game():
+    """ Initialize game variables """
+    st.session_state['number'] = int(generate_secred_number())
+    st.session_state['attempts'] = 0  # Reset attempts
+    st.session_state['cow_score'] = ''
 
 
-def check_players_tip(tip, attampts_count):
-	''' Checking if player's tip follows game rules. '''
-	if not tip.isnumeric():
-		return 'Write only numbers.'
-	elif tip[0] == '0':
-		return 'Digit 0 must not be on 1. position.'
-	elif len(tip) != 4:
-		return 'Your number must have 4 digits.'
-	elif len(set(tip)) != 4:
-		return 'Your number must not contain duplicite digit.'
-	else:
-		return check_bulls_and_cows()
+# Check if 'number' and 'attempts' are already in session_state (i.e., the game is ongoing)
+if 'number' not in st.session_state or 'attempts' not in st.session_state:
+    reset_game()  # Initialize game variables
 
+# Title for the app
+st.title('🐂 Guess the Number! 🐄')
 
-def game():
-  ''' Main function, runs the game. '''
-	global sacred_word
-	sacred_word = create_sacret_number()
-	st.write('-' * 49)
-	st.write(text)
-	st.write(game_rules)
-	attampts_count = 0
+# User input for guesses
+players_guess = st.text_input('Enter your guess 4-digit number:', key='guess')
 
-    
-  # player repeats his attampts since guess the correct number
-	while True:
-		st.write('-' * 49)
-		global tip
-		tip = input()
-    st.input_box(label='Guess my 4-digit numer:', placeholder='Guess my 4-digit numer: [for comfirmation press Enter key]', on_change=game, key='tip_widget')
-		st.write(check_players_tip(tip, attampts_count))
-		attampts_count += 1
-		if tip == sacred_word:
-			st.write(f"Congratulation! You won on {attampts_count}. attempt!")
-			break
+# Button to make a guess
+if st.button('Guess'):
+    # decrease difficulty
+    # if players_guess < int(st.session_state.number):
+    #    st.warning('Too low! Try again.')
+    # elif players_guess > int(st.session_state.number):
+    #    st.error('Too high! Try again.')
+    st.session_state.attempts += 1  # Increment attempts
+    if not players_guess.isnumeric():
+        st.markdown(':red[Write only numbers.]')
+    elif players_guess[0] == '0':
+        st.markdown(':red[Digit 0 must not be on 1. position.]')
+    elif len(players_guess) != 4:
+        st.markdown(':red[Your number must have exactly 4 digits.]')
+    elif len(set(players_guess)) != 4:
+        st.markdown(':red[Your number must not contain duplicite digit.]')
+    else:
+        bulls = []
+        cows = []
+        bulls_emoji = '🐂'
+        cows_emoji = '🐄'
+        secred_number = str(st.session_state['number'])
+        for index, digit in enumerate(players_guess):
+            if digit in secred_number and secred_number[index] == players_guess[index]:
+                 bulls.append(digit)
+            if digit in secred_number and secred_number[index] != players_guess[index]:
+                cows.append(digit)
 
+        if len(bulls) == 1:
+            bulls_count = 'bull'
+        else:
+            bulls_count = 'bulls'
+        if len(cows) == 1:
+            cows_count = 'cow'
+        else:
+            cows_count = 'cows'
 
-text = f"{'':🐂^8}  Welcome to number-guessing game!  {'':🐄^8}"
-game_rules = '''
-Game Rules, I am thinking a number that
-1. have 4 different digits
-2. doesn't start with digit 0 '''
+        st.session_state['cow_score'] = f"{len(bulls)} {bulls_count} {bulls_emoji * len(bulls)}, {len(cows)} {cows_count} {cows_emoji * len(cows)}"
+        # Victory
+        if len(bulls) == 4:
+            st.success(f'Congratulations! You found the number {st.session_state.number} in {st.session_state.attempts} attempts.')
+            if st.button('Play Again'):
+                reset_game()
 
+# Show the current number of attempts
+st.write(f'Attempts: {st.session_state.attempts}')
+st.write(f'Cow score: {st.session_state.cow_score}')
+guess = st.number_input('Enter your guess (1-100):', min_value=1, max_value=100, key='guess2')
 
-game()
+# Optionally, add a button to reset the game at any time
+if st.button('Reset Game'):
+    reset_game()
