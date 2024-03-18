@@ -76,7 +76,6 @@ if st.button('Guess'):
 # Show the current number of attempts
 st.write(f'Attempts: {st.session_state.attempts}')
 st.write(f'Cow score: {st.session_state.cow_score}')
-guess = st.number_input('Enter your guess (1-100):', min_value=1, max_value=100, key='guess2')
 
 # Optionally, add a button to reset the game at any time
 if st.button('Reset Game'):
