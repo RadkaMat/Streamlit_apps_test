@@ -1,5 +1,5 @@
+import streamlit as st
 from random import choice
-from tkinter import *
 from random_words import random_words1
 
 
