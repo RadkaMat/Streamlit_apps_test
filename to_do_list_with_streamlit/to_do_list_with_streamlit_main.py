@@ -38,7 +38,7 @@ st.text_input(label='Write new to-do:', value='', placeholder='Write new to-do..
 
 # clean new to-do widget
 if 'new_to_do' not in st.session_state:
-    st.session_state.new_to_do= ''
+    st.session_state.new_to_do = ''
 
 st.write(f'The last added to-do: {st.session_state.new_to_do}')
 
