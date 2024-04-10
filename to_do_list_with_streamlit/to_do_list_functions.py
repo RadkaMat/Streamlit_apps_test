@@ -1,6 +1,6 @@
 import streamlit as st
 
-PATH = r'Streamlit_apps/to_do_list_with_streamlit/to_do_list_result.txt'
+PATH = r'to_do_list_with_streamlit/to_do_list_result.txt'
 
 
 def get_to_do_list(pathx=PATH):
