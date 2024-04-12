@@ -17,6 +17,6 @@ def get_to_do_list(pathx=PATH):
 
 
 def save_to_do_list(to_do_listx, pathx=PATH):
-    """ Function saves the to-do list to streamlit linux cloud server,,. """
+    """ Function saves the to-do list to streamlit linux cloud server. """
     with open(pathx, mode='w', encoding='UTF-8') as filex:
         filex.writelines(to_do_listx)

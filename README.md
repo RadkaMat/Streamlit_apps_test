@@ -7,11 +7,11 @@
 ## My Python Apps:
 >
 1. **To-do List** - write down your important to-does, btw. why to keep them in mind?
-- URL: https://applicationpython-deozyjfzehmnquevb8p9rk.streamlit.app/
+- URL: https://pythonwebapp-todolist.streamlit.app/
 ![Python](https://github.com/RadkaMat/application_python/blob/master/pictures_general/to_do_list_screenshot.PNG)
 >
 2. **Knowledge Quiz** - test your Linux knowledge, comment from autor: not very easy difficulty
-- URL: https://applicationpython-i5yrp9zceytpl9uqxfjic3.streamlit.app/
+- URL: https://pythonwebapp-knowledgequizlinux.streamlit.app/
 ![Python](https://github.com/RadkaMat/application_python/blob/master/pictures_general/knowledge_quiz_screenshot2.png)
 >
 ## My Python Games:
