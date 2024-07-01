@@ -35,7 +35,7 @@ with form:
     if confirm:
         # Create a new To-do list of to-does excluding the checked ones
         to_do_list = [to_do for to_do, checked in checkbox_state.items() if not checked]
-        function.save_to_do_list(to_do_list, pathx=function.CESTA_TEST)
+        function.save_to_do_list(to_do_list)
         st.experimental_rerun()
 
 # Add new to-do.
