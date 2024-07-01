@@ -6,10 +6,10 @@ import random
 def generate_secred_number():
     """ Random number between 1023 and 9876 """
     while True:
-        secred_number = str(random.randint(1023, 9876))
-        if len(set(secred_number)) == 4:
+        secred_game_number = str(random.randint(1023, 9876))
+        if len(set(secred_game_number)) == 4:
             break
-    return secred_number
+    return secred_game_number
 
 
 def reset_game():
@@ -53,7 +53,7 @@ if st.button('Guess'):
         secred_number = str(st.session_state['number'])
         for index, digit in enumerate(players_guess):
             if digit in secred_number and secred_number[index] == players_guess[index]:
-                 bulls.append(digit)
+                bulls.append(digit)
             if digit in secred_number and secred_number[index] != players_guess[index]:
                 cows.append(digit)
 
@@ -67,6 +67,7 @@ if st.button('Guess'):
             cows_count = 'cows'
 
         st.session_state['cow_score'] = f"{len(bulls)} {bulls_count} {bulls_emoji * len(bulls)}, {len(cows)} {cows_count} {cows_emoji * len(cows)}"
+
         # Victory
         if len(bulls) == 4:
             st.success(f'Congratulations! You found the number {st.session_state.number} in {st.session_state.attempts} attempts.')
