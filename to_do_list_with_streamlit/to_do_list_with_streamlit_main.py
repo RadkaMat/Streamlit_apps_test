@@ -1,6 +1,7 @@
 import streamlit as st
 import to_do_list_functions as function
 from datetime import datetime
+from pandas import DataFrame, RangeIndex
 
 
 def add_new_to_do_on_change():
@@ -36,6 +37,10 @@ with form:
         # Create a new To-do list of to-does excluding the checked ones
         to_do_list = [to_do for to_do, checked in checkbox_state.items() if not checked]
         function.save_to_do_list(to_do_list)
+
+        # Create a new list of finished tasks for history logs
+        to_do_list_done = [to_do for to_do, checked in checkbox_state.items() if checked]
+        function.save_to_do_list(to_do_list_done, pathx=function.PATH_HISTORY, save_mode='a')
         st.experimental_rerun()
 
 # Add new to-do.
@@ -50,6 +55,11 @@ if 'new_to_do' not in st.session_state:
 
 st.write(f'The last added to-do: {st.session_state.new_to_do}')
 
+if st.button('Show history'):
+    to_do_list_history = function.get_to_do_list(pathx=function.PATH_HISTORY)
+    data_frame_history = DataFrame({'Name of To-do': to_do_list_history},
+                                   index=RangeIndex(start=1, stop=len(to_do_list_history)+1))
+    st.table(data_frame_history)
 
 # check tha state of all variables
 # st.session_state
