@@ -18,17 +18,16 @@ to_do_list = function.get_to_do_list()
 checkbox_state = {to_do: False for to_do in to_do_list}
 
 # Page settings
-st.set_page_config(layout='wide')
-
+# st.set_page_config(layout='wide')
 
 # To-do list with unfinished tasks.
 st.title('To-do list &#9989;')
 
 form = st.form('Checking form', clear_on_submit=True)
 with form:
-    for to_do in to_do_list:
+    for index, to_do in enumerate(to_do_list):
         # Use the checkbox to display the to-does
-        checkbox_state[to_do] = st.checkbox(label=to_do, key=to_do)
+        checkbox_state[to_do] = st.checkbox(label=to_do, key=index)
 
     confirm = form.form_submit_button('Done')
 
@@ -60,6 +59,12 @@ if st.button('Show history'):
     data_frame_history = DataFrame({'Name of To-do': to_do_list_history},
                                    index=RangeIndex(start=1, stop=len(to_do_list_history)+1))
     st.table(data_frame_history)
+
+# Delete history of the finished to-does
+if st.button('Delete history', type='primary'):
+    clear_history = []
+    function.save_to_do_list(clear_history, pathx=function.PATH_HISTORY)
+    st.success('The history of your finished to-does was deleted.', icon="✅")
 
 # check tha state of all variables
 # st.session_state
