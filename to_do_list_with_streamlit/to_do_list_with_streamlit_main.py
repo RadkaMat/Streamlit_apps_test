@@ -40,7 +40,7 @@ with form:
         # Create a new list of finished tasks for history logs
         to_do_list_done = [to_do for to_do, checked in checkbox_state.items() if checked]
         function.save_to_do_list(to_do_list_done, pathx=function.PATH_HISTORY, save_mode='a')
-        st.experimental_rerun()
+        st.rerun()
 
 # Add new to-do.
 st.title('New to-do +')
