@@ -17,10 +17,22 @@ def add_new_to_do_on_change():
 to_do_list = function.get_to_do_list()
 checkbox_state = {to_do: False for to_do in to_do_list}
 
-# Page settings
+# Page settings and background image
 # st.set_page_config(layout='wide')
+page_bg_image = """
+<style>
+[data-testid="stAppViewContainer"] {
+background-image: url("https://images.unsplash.com/photo-1722082839802-18b18cb23a62");
+background-size: cover;
+
+[data-testid="stAppViewBlockContainer"] {
+background-color: #262626;
+}
+</style>
+"""
 
 # To-do list with unfinished tasks.
+st.markdown(page_bg_image, unsafe_allow_html=True)
 st.title('To-do list &#9989;')
 
 form = st.form('Checking form', clear_on_submit=True)
