@@ -21,3 +21,12 @@ def save_to_do_list(to_do_listx, pathx=PATH, save_mode='w'):
     """ This function saves the to-do list (save_mode 'w') or history (save_mode 'a'). """
     with open(pathx, mode=save_mode, encoding='UTF-8') as filex:
         filex.writelines(to_do_listx)
+
+
+def check_valid_input(new_to_dox):
+    """ This function checks if user input is valid. """
+    # check whitespace, valid input cannot be only whitespaces
+    if new_to_dox.isspace():
+        return False
+    else:
+        return True
