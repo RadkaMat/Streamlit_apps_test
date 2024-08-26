@@ -6,11 +6,11 @@ from pandas import DataFrame, RangeIndex
 
 def add_new_to_do_on_change():
     """ Function adds new to-do to to-do list. """
-    add_new_to_do = st.session_state['new_to_do_widget'] + ' ' + str(datetime.now())[:10] + '\n'
     # check if input is valid: is not only whitespaces
-    if not function.check_valid_input(add_new_to_do):
+    if function.check_valid_input(st.session_state['new_to_do_widget']):
+        add_new_to_do = st.session_state['new_to_do_widget'] + ' ' + str(datetime.now())[:10] + '\n'
         to_do_list.append(add_new_to_do)
-    function.save_to_do_list(to_do_list)
+        function.save_to_do_list(to_do_list)
     st.session_state.new_to_do = st.session_state.new_to_do_widget
     st.session_state.new_to_do_widget = ''
 
@@ -66,6 +66,12 @@ st.text_input(label='Write new to-do:', value='', placeholder='Write new to-do..
 if 'new_to_do' not in st.session_state:
     st.session_state.new_to_do = ''
 
+# Button to add new to-do
+if st.button('Add to-do +'):
+    add_new_to_do_on_change
+    st.rerun()
+
+# Message to write the last added to-do
 st.write(f'The last added to-do: {st.session_state.new_to_do}')
 
 if st.button('Show history'):
