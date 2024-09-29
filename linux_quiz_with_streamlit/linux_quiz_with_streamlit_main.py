@@ -29,6 +29,8 @@ def display_quiz(question_set):
 
             st.write(question_data['Bash script'])
 
+            write_question_script(question_data['Bash script'])
+
             # display options using radio buttons
             user_answer = st.radio('Select your answer:',
                                    [question_data['Answer A'],
