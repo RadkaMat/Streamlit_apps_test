@@ -27,8 +27,6 @@ def display_quiz(question_set):
         for index, question_data in enumerate(question_set):
             st.write(f"{index + 1}. {question_data['Question']}")
 
-            st.write(question_data['Bash script'])
-
             write_question_script(question_data['Bash script'])
 
             # display options using radio buttons
