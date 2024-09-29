@@ -68,7 +68,7 @@ def display_quiz(question_set):
 # load data, display image and question sets
 quiz_data = load_quiz_data()
 
-st.image('Linux_image2.jpg')
+st.image('linux_quiz_with_streamlit/Linux_image2.jpg')
 st.title('Linux knowledge quiz')
 question_set_picked = st.radio(
     'Choose a set of questions',
