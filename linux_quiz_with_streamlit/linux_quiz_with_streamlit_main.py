@@ -3,36 +3,30 @@ import json
 
 
 # load quiz data
-with open(r'linux_quiz_with_streamlit/linux_quiz_data.json', 'r') as file_to_read:
-    file_content = file_to_read.read()
-quiz_data = json.loads(file_content)
+def load_quiz_data():
+    with open(r'linux_quiz_with_streamlit/linux_quiz_data.json', 'r') as file_to_read:
+        file_content = file_to_read.read()
+    quiz_datax = json.loads(file_content)
+    return quiz_datax
 
 
-# Function to get color based on difficulty
-def get_color(difficulty):
-    if difficulty.lower() == "easy":
-        return "green"
-    elif difficulty.lower() == "medium":
-        return "yellow"
-    elif difficulty.lower() == "hard":
-        return "orange"
-    else:
-        return "black"  # Default color
+# if script is a port of the question write script or pass
+def write_question_script(question_script):
+    if question_script:
+        st.code(question_script)
 
 
-def display_quiz():
-    score = 0
+# function to display quiz questions and collect user responses
+def display_quiz(question_set):
+    right_answers_total = 0
+    wrong_answers = dict()
+    all_answers = list()
 
     # create a form
     with st.form('Linux question'):
-        for index, question_data in enumerate(quiz_data):
-            # Get color based on difficulty
-            # color = get_color(question_data['Difficulty'])
-
-            # Colorful question name using HTML formatting
-            # st.write(f"<h5 style='color: {color};'> {question_data['Difficulty']} question</h5> {index + 1}. {question_data['Question']}",
-            #         unsafe_allow_html=True)
+        for index, question_data in enumerate(question_set):
             st.write(f"{index + 1}. {question_data['Question']}")
+
             st.write(question_data['Bash script'])
 
             # display options using radio buttons
@@ -40,34 +34,53 @@ def display_quiz():
                                    [question_data['Answer A'],
                                     question_data['Answer B'],
                                     question_data['Answer C'],
-                                    question_data['Answer D']])
+                                    question_data['Answer D']],
+                                   index=None)
 
             # check if the selected answer is correct
             if user_answer == question_data["Correct Answer"]:
-                score += 1
+                all_answers.append(user_answer)
+            else:
+                all_answers.append('')
+
+            # check if the selected answer is correct
+            if user_answer == question_data['Correct Answer']:
+                right_answers_total += 1
+            else:
+                wrong_answers[question_data['Question']] = question_data['Correct Answer']
 
             # display an empty line between questions
             st.write('')
 
         # submit button to calculate the score
-        submit_button = st.form_submit_button('Submit answers')
+        finish_quiz_button = st.form_submit_button('Submit answers')
 
-    return score, submit_button
+        # display the message after the user submits the quiz
+        if finish_quiz_button:
+            st.write('You finished the quiz!')
+            st.write(f"Number of right answers: {right_answers_total}, from total: {len(question_set)}.")
+            st.write('Correct answers are:')
+            st.dataframe(wrong_answers)
+            print(all_answers)
 
 
-# main(), display the image at the top, the quiz and get the score
-st.image(r'linux_quiz_with_streamlit/Linux_image2.jpg')
+# MAIN PART OF THE QUIZ APP
+# load data, display image and question sets
+quiz_data = load_quiz_data()
+
+st.image('Linux_image2.jpg')
 st.title('Linux knowledge quiz')
-score, submit_button = display_quiz()
+question_set_picked = st.radio(
+    'Choose a set of questions',
+    [1, 2, 3, 4, 5, 6]
+)
 
-# display the score only after the user submits the quiz
-if submit_button:
-    st.write(f"Your scored {score} out of {len(quiz_data)} quistions.")
-    min_score_perc = 70
-    min_score = len(quiz_data)/100 * min_score_perc
-    if score > min_score:
-        st.write('🙂 Congratulation! You passed the exam.')
-    else:
-        st.write('😕 You failed the exam. You should learn more.')
-        st.image(r'linux_quiz_with_streamlit/Linux_Commands.png')
-      
+# assuming each quiz part has 20 questions
+questions_per_set = 20
+start_index = (question_set_picked - 1) * questions_per_set
+end_index = start_index + questions_per_set
+
+# Display the selected quiz questions
+display_quiz(quiz_data[start_index:end_index])
+
+# source: https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes/blob/main/linux/linux-quiz.md
