@@ -16,38 +16,45 @@ def write_question_script(question_script):
         st.code(question_script)
 
 
+def save_quiz_data_with_answers(quiz_data_with_answers):
+    with open(r'linux_quiz_with_streamlit/linux_quiz_data_with_answers.json', 'w', encoding='utf-8') as file_to_save:
+        json.dump(quiz_data_with_answers, file_to_save, ensure_ascii=False, indent=4)
+
+
 # function to display quiz questions and collect user responses
-def display_quiz(question_set):
-    right_answers_total = 0
-    wrong_answers = dict()
-    all_answers = list()
+def display_quiz(question_setx):
 
     # create a form
     with st.form('Linux question'):
-        for index, question_data in enumerate(question_set):
-            st.write(f"{index + 1}. {question_data['Question']}")
+        for index, question_datax in enumerate(question_setx):
 
-            write_question_script(question_data['Bash script'])
+            st.write(f"{index + 1}. {question_datax['Question']}")
+
+            write_question_script(question_datax['Bash script'])
 
             # display options using radio buttons
             user_answer = st.radio('Select your answer:',
-                                   [question_data['Answer A'],
-                                    question_data['Answer B'],
-                                    question_data['Answer C'],
-                                    question_data['Answer D']],
+                                   [question_datax['Answer A'],
+                                    question_datax['Answer B'],
+                                    question_datax['Answer C'],
+                                    question_datax['Answer D']],
                                    index=None)
 
             # check if the selected answer is correct
-            if user_answer == question_data["Correct Answer"]:
-                all_answers.append(user_answer)
+            if user_answer == question_datax["Correct Answer"]:
+                question_datax['Answer_color'] = 'green'
             else:
-                all_answers.append('')
+                question_datax['Answer_color'] = 'red'
 
-            # check if the selected answer is correct
-            if user_answer == question_data['Correct Answer']:
-                right_answers_total += 1
+            # store user answer in variable
+            answers = [question_datax['Answer A'], question_datax['Answer B'], question_datax['Answer C'],
+                       question_datax['Answer D']]
+
+            # Find the index of the user's answer in the list
+            if user_answer in answers:
+                question_datax['User answer'] = answers.index(user_answer)
             else:
-                wrong_answers[question_data['Question']] = question_data['Correct Answer']
+                question_datax['User answer'] = None
 
             # display an empty line between questions
             st.write('')
@@ -57,19 +64,22 @@ def display_quiz(question_set):
 
         # display the message after the user submits the quiz
         if finish_quiz_button:
-            st.write('You finished the quiz!')
-            st.write(f"Number of right answers: {right_answers_total}, from total: {len(question_set)}.")
-            st.write('Correct answers are:')
-            st.dataframe(wrong_answers)
-            print(all_answers)
+            save_quiz_data_with_answers(question_setx)
+            st.session_state.quiz_submitted = True
+            st.rerun()
 
 
 # MAIN PART OF THE QUIZ APP
-# load data, display image and question sets
-quiz_data = load_quiz_data()
+# Set a session state variable to track if the quiz has been submitted
+if 'quiz_submitted' not in st.session_state:
+    st.session_state.quiz_submitted = False
 
-st.image('linux_quiz_with_streamlit/Linux_image2.jpg')
-st.title('Linux knowledge quiz')
+# add steps to remove DuplicateWidgetID error
+if 'stage' not in st.session_state:
+    st.session_state.stage = 0
+
+# load data, display image and question sets
+quiz_question_data = load_quiz_data()
 question_set_picked = st.radio(
     'Choose a set of questions',
     [1, 2, 3, 4, 5, 6]
@@ -81,6 +91,37 @@ start_index = (question_set_picked - 1) * questions_per_set
 end_index = start_index + questions_per_set
 
 # Display the selected quiz questions
-display_quiz(quiz_data[start_index:end_index])
+question_set = quiz_question_data[start_index:end_index]
+
+st.image('Linux_image2.jpg')
+st.title('Linux knowledge quiz')
+
+if not st.session_state.quiz_submitted:
+    display_quiz(question_set)
+
+# Display results after submission
+if st.session_state.quiz_submitted:
+    question_set_with_answers = load_quiz_data('linux_quiz_data_with_answers.json')
+    st.write('You finished the quiz!')
+    with st.form('Linux answers'):
+        for index, question_data2 in enumerate(question_set_with_answers):
+            st.write(f"{index + 1}. :{question_data2['Answer_color']}[{question_data2['Question']}]")
+
+            write_question_script(question_data2['Bash script'])
+
+            # display answers using radio buttons
+            user_answer2 = st.radio('Select your answer:',
+                                    [question_data2['Answer A'],
+                                     question_data2['Answer B'],
+                                     question_data2['Answer C'],
+                                     question_data2['Answer D']],
+                                    index=question_data2['User answer'],
+                                    disabled=True)
+
+            if user_answer2 != question_data2['Correct Answer']:
+                st.write(f"The correct answer is: :red[{question_data2['Correct Answer']}]")
+
+        # Quiz submission button
+        new_quiz = st.form_submit_button('Submit')
 
 # source: https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes/blob/main/linux/linux-quiz.md
