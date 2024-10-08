@@ -93,7 +93,7 @@ end_index = start_index + questions_per_set
 # Display the selected quiz questions
 question_set = quiz_question_data[start_index:end_index]
 
-st.image('Linux_image2.jpg')
+st.image('linux_quiz_with_streamlit/Linux_image2.jpg')
 st.title('Linux knowledge quiz')
 
 if not st.session_state.quiz_submitted:
