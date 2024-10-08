@@ -3,8 +3,8 @@ import json
 
 
 # load quiz data
-def load_quiz_data():
-    with open(r'linux_quiz_with_streamlit/linux_quiz_data.json', 'r') as file_to_read:
+def load_quiz_data(pathx=r'linux_quiz_with_streamlit/linux_quiz_data.json'):
+    with open(pathx, 'r') as file_to_read:
         file_content = file_to_read.read()
     quiz_datax = json.loads(file_content)
     return quiz_datax
@@ -101,7 +101,7 @@ if not st.session_state.quiz_submitted:
 
 # Display results after submission
 if st.session_state.quiz_submitted:
-    question_set_with_answers = load_quiz_data('linux_quiz_data_with_answers.json')
+    question_set_with_answers = load_quiz_data(r'linux_quiz_with_streamlit/linux_quiz_data_with_answers.json')
     st.write('You finished the quiz!')
     with st.form('Linux answers'):
         for index, question_data2 in enumerate(question_set_with_answers):
