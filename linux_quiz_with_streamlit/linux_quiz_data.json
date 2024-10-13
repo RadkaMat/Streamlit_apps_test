@@ -7,7 +7,7 @@
         "Answer C": "ls -l",
         "Answer D": "blkid",
         "Correct Answer": "blkid",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "Linux file access control lists (ACLs) are \\_.",
@@ -17,7 +17,7 @@
         "Answer C": "a type of firewall for Linux",
         "Answer D": "the same as standard Linux permissions",
         "Correct Answer": "discretionary access control system permissions layered over standard Linux permissions",
-        "Difficulty": "Medium"
+        "Category": "User and Group Management"
     },
     {
         "Question": "When using iproute2, how do you show routing information for an IPv6 network?",
@@ -27,7 +27,7 @@
         "Answer C": "ip -6 route show",
         "Answer D": "ip route show",
         "Correct Answer": "ip -6 route show",
-        "Difficulty": "Medium"
+        "Category": "Network configuration and monitoring"
     },
     {
         "Question": "What does this command string do?",
@@ -37,7 +37,7 @@
         "Answer C": "It finds all files larger than 10 MB and long lists them using the ls command.",
         "Answer D": "It uses the ls command to find all files in the filesystem matching the {} wildcard.",
         "Correct Answer": "It finds all files larger than 10 MB and long lists them using the ls command.",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting 2: Regular expressions"
     },
     {
         "Question": "What would this locate command show?",
@@ -47,7 +47,7 @@
         "Answer C": "all file paths that start with \"/usr\", include the word \"pixmaps\", and end with \".jpg\"",
         "Answer D": "all file paths that include \"/usr/pixmaps\" and end with \".jpg\"",
         "Correct Answer": "all file paths that start with \"/usr\", include the word \"pixmaps\", and end with \".jpg\"",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting 2: Regular expressions"
     },
     {
         "Question": "Which command allows you to do packet analysis from the command line?",
@@ -57,7 +57,7 @@
         "Answer C": "netstat",
         "Answer D": "tcpdump",
         "Correct Answer": "tcpdump",
-        "Difficulty": "Medium"
+        "Category": "Network Configuration and Monitoring"
     },
     {
         "Question": "Which command will tell you how long a system has been running?",
@@ -67,7 +67,7 @@
         "Answer C": "runtime",
         "Answer D": "access",
         "Correct Answer": "uptime",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "How would you describe PCP (Performance Co-Pilot)?",
@@ -77,7 +77,7 @@
         "Answer C": "It is a set of tools, services, and libraries for gathering and analyzing performance measures.",
         "Answer D": "It is a tool designed to change system configuration for purposes of optimization.",
         "Correct Answer": "It is a set of tools, services, and libraries for gathering and analyzing performance measures.",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "You want to resolve a long list of DNS names using dig. What should you do?",
@@ -87,7 +87,7 @@
         "Answer C": "Write a shell script to send multiple dig queries to the DNS server.",
         "Answer D": "Save the DNS names in an SQL database and process it with dig.",
         "Correct Answer": "Create a text file including all names and use the -f option of dig.",
-        "Difficulty": "Medium"
+        "Category": "Network Configuration and Monitoring"
     },
     {
         "Question": "What would this command output?",
@@ -97,7 +97,7 @@
         "Answer C": "the UUID, process ID, parent process ID, CPU usage, and command name of a process",
         "Answer D": "all of these answers",
         "Correct Answer": "the user ID, process ID, parent process ID, CPU usage, and command name of a process",
-        "Difficulty": "Medium"
+        "Category": "Process Management"
     },
     {
         "Question": "Which command in Bash executes the last line in the shell history that starts with ls?",
@@ -107,7 +107,7 @@
         "Answer C": "!\\*",
         "Answer D": "!ls",
         "Correct Answer": "!ls",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting"
     },
     {
         "Question": "The ssh-copy-id command copies \\_ to the remote host.",
@@ -117,7 +117,7 @@
         "Answer C": "the ssh private key",
         "Answer D": "a fingerprint file",
         "Correct Answer": "the ssh public key",
-        "Difficulty": "Medium"
+        "Category": "Network configuration and monitoring"
     },
     {
         "Question": "What command is used to determine the amount of disk usage for a directory?",
@@ -127,7 +127,7 @@
         "Answer C": "du",
         "Answer D": "df",
         "Correct Answer": "du",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "A backup drive was created using dd to make a bit-for-bit copy. When the drive is inserted into an iSCSI target before it is booted up, the data appears to be missing. What could have happened?",
@@ -137,7 +137,7 @@
         "Answer C": "There is a conflict between the physical location of the backup drive and the original drive.",
         "Answer D": "The backup process went wrong, and the old drive was duplicates over the original drive.",
         "Correct Answer": "When the backup drive was duplicates, the label was as well. When booted, the system mounted the old duplicates drive by its identical label.",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "What is the key difference between a redirect (>) and piping to the tee command?",
@@ -147,7 +147,7 @@
         "Answer C": "Nothing, they are the same.",
         "Answer D": "The tee command sends output to STDOUT and a file, whereas a redirect sends output only to a file.",
         "Correct Answer": "The tee command sends output to STDOUT and a file, whereas a redirect sends output only to a file.",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting"
     },
     {
         "Question": "What does the /etc/nsswitch.conf file manage?",
@@ -157,17 +157,17 @@
         "Answer C": "alternative DNS services",
         "Answer D": "sources for name service information",
         "Correct Answer": "sources for name service information",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "Assume the variable myNumber holds a string consisting of 10 digits. What will this command output?",
-        "Bash script": "\necho $myNumber | sed -e 's/^[[:digit:]][[:digit:]][[:digit:]]/(&)/g'\n",
+        "Bash script": "echo $myNumber | sed -e 's/^[[:digit:]][[:digit:]][[:digit:]]/(&)/g'\n",
         "Answer A": "It will only match digits\u00e2\u20ac\u201dand since the string has only digits, the command will output the same number without changes.",
         "Answer B": "It will output the same 10-digit number, but every digit will be inside parentheses.",
         "Answer C": "It will output the entire 10-digit number inside parentheses.",
         "Answer D": "It will output the same 10-digit number, but the first 3 digits will be inside parentheses.",
         "Correct Answer": "It will output the same 10-digit number, but the first 3 digits will be inside parentheses.",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting 2: Regular expressions"
     },
     {
         "Question": "What would this sed command do?",
@@ -177,7 +177,7 @@
         "Answer C": "It would replace the first four letters with an ampersand (&).",
         "Answer D": "It would place parentheses around the first four letters of each line of textfile.txt.",
         "Correct Answer": "It would place parentheses around the first four letters of each line of textfile.txt.",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting 2: Regular expressions"
     },
     {
         "Question": "Packages can be downloaded but not installed with yum or dnf by specifying which option?",
@@ -187,7 +187,7 @@
         "Answer C": "-d",
         "Answer D": "--downloadonly",
         "Correct Answer": "--downloadonly",
-        "Difficulty": "Medium"
+        "Category": "Package Management"
     },
     {
         "Question": "What character class is equal to this set?",
@@ -197,7 +197,7 @@
         "Answer C": "`[[:alpha:]]`",
         "Answer D": "`[[:num:]]`",
         "Correct Answer": "`[[:digit:]]`",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting 2: Regular expressions"
     },
     {
         "Question": "When archiving files, which command will preserve all file attributes including ACLs and SELinux security context?",
@@ -207,7 +207,7 @@
         "Answer C": "archive",
         "Answer D": "gzip",
         "Correct Answer": "tar",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "In a systemd-based OS, you can change the system hostname by editing /etc/hostname manually and then doing what?",
@@ -217,7 +217,7 @@
         "Answer C": "Nothing, the system notices automatically.",
         "Answer D": "Notify systemd to update it by restarting the systemd-hostnamed service.",
         "Correct Answer": "Nothing, the system notices automatically.",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "What command would you use to resize an LVM volume group to include an additional physical volume?",
@@ -227,17 +227,17 @@
         "Answer C": "vgappend",
         "Answer D": "vgextend",
         "Correct Answer": "vgextend",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "When would this system cron job run its task?",
-        "Bash script": "",
+        "Bash script": "0 1 \\* \\* \\*",
         "Answer A": "every minute of the hour",
         "Answer B": "every hour of every day",
         "Answer C": "every day at 1:00 AM",
         "Answer D": "only on Mondays",
         "Correct Answer": "every day at 1:00 AM",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "ifconfig has been deprecated. What command is now recommended for changing IP addresses in the live config?",
@@ -247,7 +247,7 @@
         "Answer C": "ipman",
         "Answer D": "ip",
         "Correct Answer": "ip",
-        "Difficulty": "Medium"
+        "Category": "Network Configuration and Monitoring"
     },
     {
         "Question": "You are managing an Apache web server on a system using SELinux. By default it cannot read personal webpages in users' home directories. What SELinux boolean would you set to allow this?",
@@ -257,7 +257,7 @@
         "Answer C": "httpd_enable_homedirs",
         "Answer D": "httpd_enable_userhome_dirs",
         "Correct Answer": "httpd_enable_homedirs",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "Why doesn't passwd -l keep a user from logging in via other methods?",
@@ -267,7 +267,7 @@
         "Answer C": "It locks only the password, not the account, so users can still authenticate with keys or other methods.",
         "Answer D": "It does lock the account, keeping users from logging in even if they are using other authentication methods.",
         "Correct Answer": "It locks only the password, not the account, so users can still authenticate with keys or other methods.",
-        "Difficulty": "Medium"
+        "Category": "User and Group Management"
     },
     {
         "Question": "In the Bash shell, what is the difference between piping into | and piping into |&?",
@@ -277,7 +277,7 @@
         "Answer C": "Piping into | pipes both stdout and stderr. Piping into |& pipes only stdout.",
         "Answer D": "Piping into | pipes stdout. Piping into |& pipes all open file descriptors.",
         "Correct Answer": "Piping into | pipes stdout. Piping into |& pipes stdout and stderr.",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting"
     },
     {
         "Question": "Why is the passwd command able to modify the /etc/passwd file?",
@@ -287,7 +287,7 @@
         "Answer C": "It has the SUID permission mode and is owned by root.",
         "Answer D": "It is a system administration command.",
         "Correct Answer": "It has the SUID permission mode and is owned by root.",
-        "Difficulty": "Medium"
+        "Category": "User and Group Management"
     },
     {
         "Question": "When a user deletes a file using the rm command, Linux will \\_.",
@@ -297,7 +297,7 @@
         "Answer C": "ask for confirmation if configured to do so",
         "Answer D": "never ask for confirmation",
         "Correct Answer": "ask for confirmation if configured to do so",
-        "Difficulty": "Medium"
+        "Category": "User and Group Management"
     },
     {
         "Question": "What is a major advantage of using Logical Volume Management (LVM)?",
@@ -307,7 +307,7 @@
         "Answer C": "Repairing filesystem errors is easier than with standard partitions.",
         "Answer D": "Volumes can be resized even if the free space is not contiguous.",
         "Correct Answer": "Volumes can be resized even if the free space is not contiguous.",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "What is one major difference between brace expansion and globs?",
@@ -317,7 +317,7 @@
         "Answer C": "Brace expansion creates a list; globs match the list of pathnames.",
         "Answer D": "Globs get processes first and brace expansion later.",
         "Correct Answer": "Brace expansion creates a list; globs match the list of pathnames.",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting 2: Regular expressions"
     },
     {
         "Question": "To remove all ACLs from a directory, use setfacl with which options?",
@@ -327,17 +327,17 @@
         "Answer C": "-b",
         "Answer D": "-x",
         "Correct Answer": "-b",
-        "Difficulty": "Medium"
+        "Category": "User and Group Management"
     },
     {
         "Question": "Which choice will _not_ print \"Hello World\" in the terminal?",
         "Bash script": "",
-        "Answer A": "A myVar = 5[[ $myVar -lt 10 ]] && echo \" Hello World\"",
-        "Answer B": "B myVar = 5[[ $myVar -lt 10 ]] || echo \" Hello World\"",
-        "Answer C": "C myVar = 5[[ ! $myVar -gt 10 ]] && echo \" Hello World\"",
-        "Answer D": "D myVar = 5[[ $myVar -gt 10 ]] || echo \" Hello World\"",
-        "Correct Answer": "B myVar = 5[[ $myVar -lt 10 ]] || echo \" Hello World\"",
-        "Difficulty": "Medium"
+        "Answer A": "myVar = 5\n\n[[ $myVar -lt 10 ]] && echo \" Hello World\"",
+        "Answer B": "myVar = 5\n\n[[ $myVar -lt 10 ]] || echo \" Hello World\"",
+        "Answer C": "myVar = 5\n\n[[ ! $myVar -gt 10 ]] && echo \" Hello World\"",
+        "Answer D": "myVar = 5\n\n[[ $myVar -gt 10 ]] || echo \" Hello World\"",
+        "Correct Answer": "myVar = 5[[ $myVar -lt 10 ]] || echo \" Hello World\"",
+        "Category": "Shell Scripting 2: Regular expressions"
     },
     {
         "Question": "What is not inherited by child process?",
@@ -347,7 +347,7 @@
         "Answer C": "environmental variables",
         "Answer D": "scheduling priority",
         "Correct Answer": "shell aliases",
-        "Difficulty": "Medium"
+        "Category": "Process Management"
     },
     {
         "Question": "What NFS option allows the root user to access NFS shares as the root user?",
@@ -357,7 +357,7 @@
         "Answer C": "allow_root_access",
         "Answer D": "all_squash",
         "Correct Answer": "no_root_squash",
-        "Difficulty": "Medium"
+        "Category": "Network Configuration and Monitoring"
     },
     {
         "Question": "You send an email to a remote client using the following syntax. What will be in the body of the email?",
@@ -367,7 +367,7 @@
         "Answer C": "The email subject shows \"This is a remote test\" but the body of the email will be empty.",
         "Answer D": "the current date and time",
         "Correct Answer": "the current date and time",
-        "Difficulty": "Medium"
+        "Category": "Network Configuration and Monitoring"
     },
     {
         "Question": "What is the /etc/hosts file used for?",
@@ -377,7 +377,7 @@
         "Answer C": "setting the hostname",
         "Answer D": "configuring DNS name servers",
         "Correct Answer": "resolving the local name",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "In an extended regular expression, you would use (pattern){3} to match three instances of the pattern. How would you match the same thing with an extended glob?",
@@ -387,7 +387,7 @@
         "Answer C": "Occurrence quantifiers are not supported in Bash's version of extended globs, so this is not possible.",
         "Answer D": "{3}(pattern})",
         "Correct Answer": "Occurrence quantifiers are not supported in Bash's version of extended globs, so this is not possible.",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting 2: Regular expressions"
     },
     {
         "Question": "When configuring a Samba share, how would the engineering group be specified in the smb.conf?",
@@ -397,7 +397,7 @@
         "Answer C": "Use the group name by itself; Samba checks for its existence.",
         "Answer D": "It would be preceded by an @ symbol, such as @engineering.",
         "Correct Answer": "It would be preceded by an @ symbol, such as @engineering.",
-        "Difficulty": "Medium"
+        "Category": "Network Configuration and Monitoring"
     },
     {
         "Question": "To configure the Kerberos client, which command should you use to import the keytab file?",
@@ -407,7 +407,7 @@
         "Answer C": "pam_krb5",
         "Answer D": "kdb5_util",
         "Correct Answer": "ktutil",
-        "Difficulty": "Medium"
+        "Category": "Network Configuration and Monitoring"
     },
     {
         "Question": "To search from the current cursor position up to the beginning of the file using VIM, type \\_ and then the search criteria.",
@@ -417,7 +417,7 @@
         "Answer C": "`/`",
         "Answer D": "`/search`",
         "Correct Answer": "`?`",
-        "Difficulty": "Medium"
+        "Category": "File Viewing and Editing"
     },
     {
         "Question": "What is the job of the NetworkManager daemon?",
@@ -427,7 +427,7 @@
         "Answer C": "It attempts to keep an active network connection available at all times.",
         "Answer D": "It is a command-line tool that manages network connections.",
         "Correct Answer": "It is a command-line tool that manages network connections.",
-        "Difficulty": "Medium"
+        "Category": "Network Configuration and Monitoring"
     },
     {
         "Question": "Why might would you use the usermod command?",
@@ -437,7 +437,7 @@
         "Answer C": "to change global user account settings",
         "Answer D": "to set a user's password",
         "Correct Answer": "to change global user account settings",
-        "Difficulty": "Medium"
+        "Category": "User and Group Management"
     },
     {
         "Question": "Extending an LVM volume group does what to the formatted filesystem?",
@@ -447,7 +447,7 @@
         "Answer C": "It does nothing.",
         "Answer D": "It remounts the filesystem with the new size.",
         "Correct Answer": "It does nothing.",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "Which kernel module do you need to load to use interface bonding?",
@@ -457,7 +457,7 @@
         "Answer C": "netbond.",
         "Answer D": "bond.",
         "Correct Answer": "bonding.",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "What does this command string do?",
@@ -467,7 +467,7 @@
         "Answer C": "It finds all files in the / directory of size 10k and long lists them.",
         "Answer D": "It finds all files in the file system smaller than 10k and long lists them using the ls command.",
         "Correct Answer": "It finds all files in the file system smaller than 10k and long lists them using the ls command.",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting 2: Regular expressions"
     },
     {
         "Question": "To change the priority of multiple swap partitions, which file would you edit?",
@@ -477,7 +477,7 @@
         "Answer C": "/etc/mounts",
         "Answer D": "/etc/swaps",
         "Correct Answer": "/etc/fstab",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "What would you type to list all systemd service unit files, whether they are enabled or not?",
@@ -487,7 +487,7 @@
         "Answer C": "systemctl list-unit-files -at service",
         "Answer D": "systemctl list-unit-files -t service",
         "Correct Answer": "systemctl list-unit-files -at service",
-        "Difficulty": "Medium"
+        "Category": "System Information and Managementdium"
     },
     {
         "Question": "You can set Linux group passwords using which command?",
@@ -497,7 +497,7 @@
         "Answer C": "editsam",
         "Answer D": "grouppass",
         "Correct Answer": "gpasswd",
-        "Difficulty": "Medium"
+        "Category": "User and Group Management"
     },
     {
         "Question": "With most GNU commands, if an option is a word, what will it be preceded by?",
@@ -507,7 +507,7 @@
         "Answer C": "one dash",
         "Answer D": "nothing",
         "Correct Answer": "two dashes",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting"
     },
     {
         "Question": "What would happen if you have a script file named script that takes a long time to complete, and you type `nohup ./script &` in the command line?",
@@ -517,7 +517,7 @@
         "Answer C": "The script will run in the background until you end the session.",
         "Answer D": "The script will run in the background and will continue running even if you end the session.",
         "Correct Answer": "The script will run in the background and will continue running even if you end the session.",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting"
     },
     {
         "Question": "To elevate privileges using the `sudo` command, a user must **\\_**.",
@@ -527,17 +527,17 @@
         "Answer C": "enter the sudo user's password",
         "Answer D": "change to the root group",
         "Correct Answer": "enter their own password",
-        "Difficulty": "Medium"
+        "Category": "User and Group Management"
     },
     {
         "Question": "When would this system cron job run its task?",
-        "Bash script": "",
+        "Bash script": "0 22 * * 1-5",
         "Answer A": "on the 22nd of every month from June to May",
         "Answer B": "at 10:00 PM Monday to Friday",
         "Answer C": "every 22 minutes every day except weekends",
         "Answer D": "from 1:00 AM to 5:00 AM on the 22nd of every month",
         "Correct Answer": "at 10:00 PM Monday to Friday",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "How does TCP Wrappers differ from a firewall?",
@@ -547,7 +547,7 @@
         "Answer C": "Firewalls easily spawn commands to operate on connection data, whereas TCP Wrappers cannot.",
         "Answer D": "TCP Wrappers works at the application layer, so it can make access decisions on encrypted data.",
         "Correct Answer": "TCP Wrappers works at the application layer, so it can make access decisions on encrypted data.",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "As root, you set execute permissions for user, group, and other on a directory. Now users can do what?",
@@ -557,27 +557,27 @@
         "Answer C": "They can read files in it.",
         "Answer D": "They can delete files in it.",
         "Correct Answer": "They can traverse it.",
-        "Difficulty": "Medium"
+        "Category": "User and Group Management"
     },
     {
         "Question": "What will this command print?",
-        "Bash script": "",
+        "Bash script": "echo \"Thu Jun 4 15:45:45 PDT 2020\" | cut -f3 -d\" \"",
         "Answer A": "It will print nothing.",
         "Answer B": "Thu Jun 4 15:45:45 PDT 2020",
         "Answer C": "0.6567708333333333",
         "Answer D": "4",
         "Correct Answer": "4",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting"
     },
     {
         "Question": "How can you improve this code snippet?",
-        "Bash script": "\nif ls /etc/passwd &",
+        "Bash script": "if ls /etc/passwd &> /dev/null\nthen\n\techo \"exists\"\nfi",
         "Answer A": "The code snippet cannot be improved, this is a valid way of checking for the existence of a file.",
         "Answer B": "Use Bash's built-in `[[ ]]` test conditions instead of the ls command.",
         "Answer C": "The redirect to `/dev/null` will silence the return code invalidating the conditional. Removing the redirect will solve this.",
         "Answer D": "The ls command will output the name of the file to the screen. Running ls in quiet mode will improve the code snippet.",
         "Correct Answer": "Use Bash's built-in `[[ ]]` test conditions instead of the ls command.",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting"
     },
     {
         "Question": "Using a systemd-based distribution, you want to restrict the cron service from running either automatically or manually. Which command would you run?",
@@ -587,7 +587,7 @@
         "Answer C": "systemctl mask crond",
         "Answer D": "systemctl stop crond",
         "Correct Answer": "systemctl mask crond",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "What issue might a user have when they mount a filesystem by partition path such as /dev/sdal in the /etc/fstab file?",
@@ -597,7 +597,7 @@
         "Answer C": "There are no issues with referring to partitions by their partition path.",
         "Answer D": "It is more difficult identifying mounted devices by partition path.",
         "Correct Answer": "The device order may change on boot, resulting in a system that will not boot properly.",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "Which option would you choose to force grep to use a basic regular expression (BRE)?",
@@ -607,7 +607,7 @@
         "Answer C": "grep -e",
         "Answer D": "grep -G",
         "Correct Answer": "grep -G",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting 2: Regular expressions"
     },
     {
         "Question": "An rsyslogd filter determines which items in a log file to act on. What is it made up of?",
@@ -617,7 +617,7 @@
         "Answer C": "a facility and a priority",
         "Answer D": "a filter and a priority",
         "Correct Answer": "a filter and an action",
-        "Difficulty": "Medium"
+        "Category": "Network Configuration and Monitoring"
     },
     {
         "Question": "Which choice is a Network Manager tool used to configure network connections from the GUI?",
@@ -627,7 +627,7 @@
         "Answer C": "Onmtui",
         "Answer D": "nm-connection-editor",
         "Correct Answer": "nm-connection-editor",
-        "Difficulty": "Medium"
+        "Category": "Network Configuration and Monitoring"
     },
     {
         "Question": "What will not happen if you run the make command without parameters?",
@@ -637,7 +637,7 @@
         "Answer C": "It will look for a file called makefile in your current directory.",
         "Answer D": "It will build only programs that need to be rebuilt.",
         "Correct Answer": "It will clean up all previously generated binaries and perform a new build.",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting"
     },
     {
         "Question": "Most commands that support SELinux use which option to display SELinux security context?",
@@ -647,7 +647,7 @@
         "Answer C": "--MAC",
         "Answer D": "-Z",
         "Correct Answer": "-Z",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "What is the difference between the whoami and logname commands?",
@@ -657,7 +657,7 @@
         "Answer C": "logname specifies the name of the login log file, and whoami prints the logged in username.",
         "Answer D": "whoami shows you who logged in as initially, and logname shows who are you currently.",
         "Correct Answer": "whoami tells who are you currently, and logname tells who you were when you logged in initially.",
-        "Difficulty": "Medium"
+        "Category": "User and Group Management"
     },
     {
         "Question": "What is the command to create an associative array in Bash?",
@@ -667,17 +667,17 @@
         "Answer C": "array -a",
         "Answer D": "declare -A",
         "Correct Answer": "declare -A",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting"
     },
     {
-        "Question": "What tool should you use to replace a physical volum in LVM?",
+        "Question": "What tool should you use to replace a physical volume in LVM?",
         "Bash script": "",
         "Answer A": "lvcopy",
         "Answer B": "tar",
         "Answer C": "pvmove",
         "Answer D": "cp",
         "Correct Answer": "pvmove",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "What is the difference the `==` and `=~` comparison operators when used in BASH double square bracket `if` conditionals?",
@@ -687,17 +687,17 @@
         "Answer C": "The `=~` operator performs a string comparison; `==` performs a regex comparison.",
         "Answer D": "There is no `=~` operator in BASH `if` conditionals.",
         "Correct Answer": "The `==` operator performs a string comparison; `=~` performs a regex comparison.",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting"
     },
     {
         "Question": "What is the difference between these two lines of code?",
-        "Bash script": "echo \"data\" | tee -a file.txt\n\necho \"data\" >> file.txt",
+        "Bash script": "echo \"data\" | tee -a file.txt\necho \"data\" >> file.txt",
         "Answer A": "The first line will append the word `data` to file.txt and output it on the screen. The second line will append the word `data` only to file.txt.",
         "Answer B": "They are the same.",
         "Answer C": "The first line will append the word `data` to file.txt and there will be no output on the screen. The second line will output the word `data` on the screen and append it to `file.txt`",
         "Answer D": "Both lines will overwrite file.txt with the word data.",
         "Correct Answer": "The first line will append the word `data` to file.txt and output it on the screen. The second line will append the word `data` only to file.txt.",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting"
     },
     {
         "Question": "Using backreferences in a POSIX regular expression, which word would this pattern match?",
@@ -707,7 +707,7 @@
         "Answer C": "barrenness",
         "Answer D": "successfully",
         "Correct Answer": "possess",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting 2: Regular expressions"
     },
     {
         "Question": "To run CGI scripts with Apache, you need to **\\_**.",
@@ -717,7 +717,7 @@
         "Answer C": "make the script executable and set the `httpd_enable_cgi` SELinux boolean",
         "Answer D": "change the ownership of the script to Apache",
         "Correct Answer": "make the script executable and set the `httpd_enable_cgi` SELinux boolean",
-        "Difficulty": "Medium"
+        "Category": "Network Configuration and Monitoring"
     },
     {
         "Question": "To permanently add NAT to the default zone using firewalld, you would use which command string?",
@@ -727,7 +727,7 @@
         "Answer C": "`firewall-cmd --zone=default --add-nat`",
         "Answer D": "`firewall-cmd --zone=default --add-masquerade`",
         "Correct Answer": "`firewall-cmd --permanent --add-masquerade`",
-        "Difficulty": "Medium"
+        "Category": "Network Configuration and Monitoring"
     },
     {
         "Question": "What is the difference between using `=` and `==` in a BASH double square bracket `if` conditional?",
@@ -737,7 +737,7 @@
         "Answer C": "The single equal sign (`=`) checks equality; the double equal sign (`==`) checks string equality.",
         "Answer D": "The double equal sign (`==`) is an assignment operator; the single equal sign (`=`) checks equality.",
         "Correct Answer": "There is no difference.",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting 2: Regular expressions"
     },
     {
         "Question": "`journald` differs from traditional logging services such as `rsyslogd` and `syslogd` because its logs are **\\_** by default.",
@@ -746,8 +746,8 @@
         "Answer B": "text",
         "Answer C": "persistent",
         "Answer D": "not persistent",
-        "Correct Answer": "persistent",
-        "Difficulty": "Medium"
+        "Correct Answer": "not persistent",
+        "Category": "Network Configuration and Monitoring"
     },
     {
         "Question": "What is the purpose of a Mail Transport Agent (MTA)?",
@@ -757,7 +757,7 @@
         "Answer C": "It stores the mail in a mail queue waiting for the MUA to download it.",
         "Answer D": "It transports mail from one mail server to another.",
         "Correct Answer": "It transports mail from one mail server to another.",
-        "Difficulty": "Medium"
+        "Category": "Network Configuration and Monitoring"
     },
     {
         "Question": "What do you need to do before you can perform SSH passwordless logins?",
@@ -767,7 +767,7 @@
         "Answer C": "Create a local SSL certificate.",
         "Answer D": "Change the remote SSH configure to allow it.",
         "Correct Answer": "Generate RSA or DSA key pairs using ssh-keygen.",
-        "Difficulty": "Medium"
+        "Category": "Network Configuration and Monitoring"
     },
     {
         "Question": "When installing a downloaded package on the RedHat-based distribution manual using RPM, what may you have to do first?",
@@ -777,7 +777,7 @@
         "Answer C": "Agree to an end-user license agreement.",
         "Answer D": "provide the --resolve option so RPM resolves all packages dependency.",
         "Correct Answer": "Download all dependencies and install them before installing the desired package.",
-        "Difficulty": "Medium"
+        "Category": "Package Management"
     },
     {
         "Question": "With GNU tools such as a GNU grep, awk, and sed, what is the difference between basic regular expressions (BREs) and extended regular expressions (EREs)?",
@@ -787,7 +787,7 @@
         "Answer C": "ERE's support alternation.",
         "Answer D": "only the syntax differs.",
         "Correct Answer": "only the syntax differs.",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting 2: Regular expressions"
     },
     {
         "Question": "What is the difference between reading the list of disk partitions from `/proc/partitions` and getting it using `fdisk -l`?",
@@ -797,17 +797,17 @@
         "Answer C": "There is no difference between the two, and both lists contain the same data.",
         "Answer D": "`/proc/partitions` is the kernel's list of partitions held in ram. `fdisk -l` reads the partition table from the drive itself.",
         "Correct Answer": "`/proc/partitions` is the kernel's list of partitions held in ram. `fdisk -l` reads the partition table from the drive itself.",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "What would be in out.txt?",
-        "Bash script": "",
+        "Bash script": "cat < in.txt > out.txt",
         "Answer A": "the content of in.txt.",
         "Answer B": "the output from the command line.",
         "Answer C": "Nothing, because you cannot redirect from a file (in.txt) to another file (out.txt). You can redirect only from a command to a file.",
         "Answer D": "Nothing, The redirect will create a new empty file, but there will not be any output from the cat command to redirect.",
         "Correct Answer": "the content of in.txt.",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting"
     },
     {
         "Question": "Using alternation in a POSIX-extended regular expression, which numbers would this pattern match?",
@@ -817,7 +817,7 @@
         "Answer C": "200-299",
         "Answer D": "0-299",
         "Correct Answer": "0-99 and 200-299",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting 2: Regular expressions"
     },
     {
         "Question": "Typing `systemctl enable crond` does what to the crond service?",
@@ -827,7 +827,7 @@
         "Answer C": "Unmasks the crond service.",
         "Answer D": "Ensures that the crond service starts automatically on bootup.",
         "Correct Answer": "Ensures that the crond service starts automatically on bootup.",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "Which of these features is missing from the Bash Language?",
@@ -837,7 +837,7 @@
         "Answer C": "debug traps.",
         "Answer D": "object orientation.",
         "Correct Answer": "object orientation.",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting"
     },
     {
         "Question": "What is the first step to integrate extended globs into your command-line workflow?",
@@ -847,7 +847,7 @@
         "Answer C": "Type `shopt -s extglob` into a shell one time to set the option on permanently.",
         "Answer D": "Make extended globs persistent by adding `shopt +s extglob` to a shell startup file.",
         "Correct Answer": "Make extended globs persistent by adding `shopt -s extglob` to a shell startup file.",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting"
     },
     {
         "Question": "Which statement about default ACLs is true?",
@@ -857,7 +857,7 @@
         "Answer C": "They provide inheritance for group ownership.",
         "Answer D": "They grant access to the directory on which they are set.",
         "Correct Answer": "They provide inheritance for user and group permissions.",
-        "Difficulty": "Medium"
+        "Category": "User and Group Management"
     },
     {
         "Question": "The object that `systemd` uses to manage services is called a \\_ file.",
@@ -867,7 +867,7 @@
         "Answer C": "single",
         "Answer D": "process",
         "Correct Answer": "unit",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "What is the difference between the apt remove and apt autoremove commands?",
@@ -877,7 +877,7 @@
         "Answer C": "Both uninstall software. The apt remove command also uninstalls the dependencies.",
         "Answer D": "The apt autoremove command is a system service that routinely removes unused software packages.",
         "Correct Answer": "Both uninstall software. The apt autoremove command also uninstalls the dependencies.",
-        "Difficulty": "Medium"
+        "Category": "Package Management"
     },
     {
         "Question": "You want to extract the contents from an rpm package. Which command do you use?",
@@ -887,7 +887,7 @@
         "Answer C": "rpm --reinstall",
         "Answer D": "rpm2cpio",
         "Correct Answer": "rpm2cpio",
-        "Difficulty": "Medium"
+        "Category": "Package Management"
     },
     {
         "Question": "Which variable contains last background job process id?",
@@ -897,7 +897,7 @@
         "Answer C": "`$?`",
         "Answer D": "`$*`",
         "Correct Answer": "`$!`",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting"
     },
     {
         "Question": "Which feature does LVM2 included in most distributions not support?",
@@ -907,7 +907,7 @@
         "Answer C": "increasing LV size while mounted",
         "Answer D": "reducing LV size while mounted",
         "Correct Answer": "volume striping",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "Which improvements do access control lists (ACLs) have over standard Linux permissions?",
@@ -917,7 +917,7 @@
         "Answer C": "ACLs allow a file to be owned by more than one user and group.",
         "Answer D": "ACLs provide additional flags such as append-only and immutable.",
         "Correct Answer": "ACLs allow permissions to be set for more than one user or group on a file or directory.",
-        "Difficulty": "Medium"
+        "Category": "User and Group Management"
     },
     {
         "Question": "What is a maximum length for a filename under Linux?",
@@ -927,7 +927,7 @@
         "Answer C": "255 bytes",
         "Answer D": "1023 bytes",
         "Correct Answer": "255 bytes",
-        "Difficulty": "Medium"
+        "Category": "File and Directory Management"
     },
     {
         "Question": "Which command do you use to rename a file in Linux?",
@@ -937,7 +937,7 @@
         "Answer C": "rename",
         "Answer D": "ren",
         "Correct Answer": "mv",
-        "Difficulty": "Medium"
+        "Category": "File and Directory Management"
     },
     {
         "Question": "Which file is backup file of /etc/passwd ?",
@@ -947,7 +947,7 @@
         "Answer C": "/etc/paaswd.",
         "Answer D": "We can not recover",
         "Correct Answer": "/etc/passwd-",
-        "Difficulty": "Medium"
+        "Category": "User and Group Management"
     },
     {
         "Question": "Which Vim command writes your changes to the currently open file and quits the Vim editor?",
@@ -957,7 +957,7 @@
         "Answer C": "`:sq`",
         "Answer D": "`:w`",
         "Correct Answer": "`:wq`",
-        "Difficulty": "Medium"
+        "Category": "File Viewing and Editing"
     },
     {
         "Question": "Just like IP addresses identify hosts on a network, **\\_** identify the services on a host.",
@@ -967,7 +967,7 @@
         "Answer C": "ports",
         "Answer D": "broadcast addresses",
         "Correct Answer": "ports",
-        "Difficulty": "Medium"
+        "Category": "Network Configuration and Monitoring"
     },
     {
         "Question": "Which command shows the free disk space on one or more Linux filesystems?",
@@ -977,7 +977,7 @@
         "Answer C": "du",
         "Answer D": "df",
         "Correct Answer": "df",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "In Linux, the Epoch is the number of seconds that have elapsed since January 1st, **\\_**.",
@@ -987,7 +987,7 @@
         "Answer C": "1960",
         "Answer D": "1970",
         "Correct Answer": "1970",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "In which Linux shell script positional parameter is the script itself stored?",
@@ -997,7 +997,7 @@
         "Answer C": "$0",
         "Answer D": "$9",
         "Correct Answer": "$0",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting"
     },
     {
         "Question": "VirtualBox provides **\\_**, which are installed on guests and allow the guest operating system to access shared folders on the host system, share the clipboard, and some other similar actions.",
@@ -1007,7 +1007,7 @@
         "Answer C": "SSHs",
         "Answer D": "guest additions",
         "Correct Answer": "guest additions",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "Given an IP address of 199.83.131.0 and a subnet mask of 255.255.255.0, what is the broadcast address?",
@@ -1017,7 +1017,7 @@
         "Answer C": "199.83.131.0",
         "Answer D": "199.83.131.255",
         "Correct Answer": "199.83.131.255",
-        "Difficulty": "Medium"
+        "Category": "Network Configuration and Monitoring"
     },
     {
         "Question": "Which Linux command shows a list of processes associated with the current user and the current terminal?",
@@ -1027,7 +1027,7 @@
         "Answer C": "pidof",
         "Answer D": "ps -e",
         "Correct Answer": "ps",
-        "Difficulty": "Medium"
+        "Category": "Process Management"
     },
     {
         "Question": "In a shell script, to create an infinite while loop, make the condition always return true by using the **\\_** command for the while loop condition.",
@@ -1037,7 +1037,7 @@
         "Answer C": "true",
         "Answer D": "always",
         "Correct Answer": "true",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting"
     },
     {
         "Question": "In Linux, which option is used with the uname command to print the processor architecture name?",
@@ -1047,7 +1047,7 @@
         "Answer C": "-ps",
         "Answer D": "-pname",
         "Correct Answer": "-p",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "Which of these do NOT constitute as a default part of the email system of Red Hat Linux?",
@@ -1057,7 +1057,7 @@
         "Answer C": "Procmail",
         "Answer D": "The MUA",
         "Correct Answer": "Pine",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "In BASH parsing, which expansion happens first?",
@@ -1067,7 +1067,7 @@
         "Answer C": "filename expansion (globbing)",
         "Answer D": "word splitting",
         "Correct Answer": "brace expansion",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting"
     },
     {
         "Question": "When pattern matching using a glob or regular expression, how many characters does a character set match?",
@@ -1077,7 +1077,7 @@
         "Answer C": "zero or one",
         "Answer D": "one or more",
         "Correct Answer": "one",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting 2: Regular expressions"
     },
     {
         "Question": "Why would you not use the `mdadm --assemble` subcommand when creating a new RAID5 array?",
@@ -1087,7 +1087,7 @@
         "Answer C": "`assemble` is a synonym for `create`.",
         "Answer D": "`assemble` is used to build new RAID arrays.",
         "Correct Answer": "`assemble` is used to build existing RAID arrays.",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "Which of the following types is not a default type of input/output in Linux?",
@@ -1097,7 +1097,7 @@
         "Answer C": "standard output",
         "Answer D": "standard file",
         "Correct Answer": "standard file",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting"
     },
     {
         "Question": "In a shell script, **\\_** means OR.",
@@ -1107,7 +1107,7 @@
         "Answer C": "|",
         "Answer D": "&&",
         "Correct Answer": "||",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting"
     },
     {
         "Question": "On a Linux or Unix system using X Window, the GVim \\* register **\\_**.",
@@ -1117,7 +1117,7 @@
         "Answer C": "is unused",
         "Answer D": "contains all yank, delete, change, and put operations",
         "Correct Answer": "contains text that is highlighted or selected with the mouse",
-        "Difficulty": "Medium"
+        "Category": "Shell Scripting"
     },
     {
         "Question": "What system mode does Linux runlevel 0 indicate?",
@@ -1127,7 +1127,7 @@
         "Answer C": "single user mode",
         "Answer D": "system reboot",
         "Correct Answer": "system halt",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "Which of the following choices is not a mode in Vi?",
@@ -1137,7 +1137,7 @@
         "Answer C": "edit",
         "Answer D": "command",
         "Correct Answer": "edit",
-        "Difficulty": "Medium"
+        "Category": "File Viewing and Editing"
     },
     {
         "Question": "which command used for delete a user?",
@@ -1147,7 +1147,7 @@
         "Answer C": "mv",
         "Answer D": "delete",
         "Correct Answer": "userdel",
-        "Difficulty": "Medium"
+        "Category": "User and Group Management"
     },
     {
         "Question": "What is the kernel of a Linux operating system?",
@@ -1157,6 +1157,16 @@
         "Answer C": "A collection of software applications that can be used to perform various tasks, such as web browsing, word processing, and programming.",
         "Answer D": "All of the above",
         "Correct Answer": "The core of the operating system that manages the hardware and software resources.",
-        "Difficulty": "Medium"
+        "Category": "System Information and Management"
+    },
+    {
+        "Question": "Which command is used to increase the size of a logical volume in LVM?",
+        "Bash script": "",
+        "Answer A": "lvcreate",
+        "Answer B": "lvremove",
+        "Answer C": "lvextend",
+        "Answer D": "lvdisplay",
+        "Correct Answer": "lvextend",
+        "Category": "System Information and Management"
     }
 ]
