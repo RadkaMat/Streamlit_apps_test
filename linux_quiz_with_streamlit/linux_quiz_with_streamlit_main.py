@@ -78,20 +78,16 @@ if 'quiz_submitted' not in st.session_state:
 if 'stage' not in st.session_state:
     st.session_state.stage = 0
 
-# load data, display image and question sets
+# Load data, display image and question sets
 quiz_question_data = load_quiz_data()
+question_category = ['Shell Scripting', 'Shell Scripting 2: Regular expressions', 'User and Group Management',
+                     'Process Management', 'Package Management', 'File Viewing and Editing',
+                     'System Information and Management', 'Network Configuration and Monitoring']
 question_set_picked = st.radio(
     'Choose a set of questions',
-    [1, 2, 3, 4, 5, 6]
+    question_category
 )
-
-# assuming each quiz part has 20 questions
-questions_per_set = 20
-start_index = (question_set_picked - 1) * questions_per_set
-end_index = start_index + questions_per_set
-
-# Display the selected quiz questions
-question_set = quiz_question_data[start_index:end_index]
+question_set = [item for item in quiz_question_data if item["Category"] == question_set_picked]
 
 st.image('linux_quiz_with_streamlit/Linux_image2.jpg')
 st.title('Linux knowledge quiz')

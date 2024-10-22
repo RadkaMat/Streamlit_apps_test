@@ -27,7 +27,7 @@
         "Answer C": "ip -6 route show",
         "Answer D": "ip route show",
         "Correct Answer": "ip -6 route show",
-        "Category": "Network configuration and monitoring"
+        "Category": "Network Configuration and Monitoring"
     },
     {
         "Question": "What does this command string do?",
@@ -117,7 +117,7 @@
         "Answer C": "the ssh private key",
         "Answer D": "a fingerprint file",
         "Correct Answer": "the ssh public key",
-        "Category": "Network configuration and monitoring"
+        "Category": "Network Configuration and Monitoring"
     },
     {
         "Question": "What command is used to determine the amount of disk usage for a directory?",
@@ -487,7 +487,7 @@
         "Answer C": "systemctl list-unit-files -at service",
         "Answer D": "systemctl list-unit-files -t service",
         "Correct Answer": "systemctl list-unit-files -at service",
-        "Category": "System Information and Managementdium"
+        "Category": "System Information and Management"
     },
     {
         "Question": "You can set Linux group passwords using which command?",
@@ -775,7 +775,7 @@
         "Answer A": "Compile the package source code.",
         "Answer B": "Download all dependencies and install them before installing the desired package.",
         "Answer C": "Agree to an end-user license agreement.",
-        "Answer D": "provide the --resolve option so RPM resolves all packages dependency.",
+        "Answer D": "Provide the --resolve option so RPM resolves all packages dependency.",
         "Correct Answer": "Download all dependencies and install them before installing the desired package.",
         "Category": "Package Management"
     },
@@ -1168,5 +1168,205 @@
         "Answer D": "lvdisplay",
         "Correct Answer": "lvextend",
         "Category": "System Information and Management"
+    },
+    {
+        "Question": "Which command can be used to terminate a process by its PID?",
+        "Bash script": "",
+        "Answer A": "term",
+        "Answer B": "kill",
+        "Answer C": "killall",
+        "Answer D": "pkill",
+        "Correct Answer": "kill",
+        "Category": "Process Management"
+    },
+    {
+        "Question": "What does the nice command do in process management?",
+        "Bash script": "",
+        "Answer A": "It sets the scheduling priority of a process.",
+        "Answer B": "It sets the PID of a process.",
+        "Answer C": "It resets the scheduling priority of a process.",
+        "Answer D": "It sets the scheduling priority of a data stream.",
+        "Correct Answer": "It sets the scheduling priority of a process.",
+        "Category": "Process Management"
+    },
+    {
+        "Question": "Which command shows the hierarchy of processes as a tree?",
+        "Bash script": "",
+        "Answer A": "pstrees",
+        "Answer B": "ps",
+        "Answer C": "tree",
+        "Answer D": "pstree",
+        "Correct Answer": "pstree",
+        "Category": "Process Management"
+    },
+    {
+        "Question": "What signal does the kill -9 command send to a process?",
+        "Bash script": "",
+        "Answer A": "SIGHUP",
+        "Answer B": "SIGSTOP",
+        "Answer C": "SIGKILL",
+        "Answer D": "SIGTERM",
+        "Correct Answer": "SIGKILL",
+        "Category": "Process Management"
+    },
+    {
+        "Question": "How can you check the real-time CPU usage of processes?",
+        "Bash script": "",
+        "Answer A": "lscpu",
+        "Answer B": "top or htop",
+        "Answer C": "pstree",
+        "Answer D": "cpuinfo",
+        "Correct Answer": "top or htop",
+        "Category": "Process Management"
+    },
+    {
+        "Question": "Which command changes the priority of an already running process?",
+        "Bash script": "",
+        "Answer A": "PR",
+        "Answer B": "priority",
+        "Answer C": "renice",
+        "Answer D": "niceness",
+        "Correct Answer": "renice",
+        "Category": "Process Management"
+    },
+    {
+        "Question": "What is the default signal sent by the kill command if no signal is specified?",
+        "Bash script": "",
+        "Answer A": "SIGSTOP",
+        "Answer B": "SIGILL",
+        "Answer C": "SIGTERM",
+        "Answer D": "SIGKILL",
+        "Correct Answer": "SIGTERM",
+        "Category": "Process Management"
+    },
+    {
+        "Question": "Which command can be used to update all packages on a Debian-based system?",
+        "Bash script": "",
+        "Answer A": "sudo apt install --all",
+        "Answer B": "sudo apt upgrade",
+        "Answer C": "sudo apt update --all",
+        "Answer D": "sudo apt refresh",
+        "Correct Answer": "sudo apt upgrade",
+        "Category": "Package Management"
+    },
+    {
+        "Question": "What option can you pass to dnf or yum to remove a package without removing its dependencies?",
+        "Bash script": "",
+        "Answer A": "--onlyremove",
+        "Answer B": "--cleanremove",
+        "Answer C": "--keepdeps",
+        "Answer D": "--noautoremove",
+        "Correct Answer": "--noautoremove",
+        "Category": "Package Management"
+    },
+    {
+        "Question": "Which command lists all installed packages on an RPM-based system?",
+        "Bash script": "",
+        "Answer A": "rpm -qa",
+        "Answer B": "rpm --showall",
+        "Answer C": "dnf list installed",
+        "Answer D": "rpm --installed",
+        "Correct Answer": "rpm -qa",
+        "Category": "Package Management"
+    },
+    {
+        "Question": "How do you clear the local cache of downloaded .deb packages in APT?",
+        "Bash script": "",
+        "Answer A": "sudo apt autoremove",
+        "Answer B": "sudo apt clean",
+        "Answer C": "sudo apt purge",
+        "Answer D": "sudo apt clearcache",
+        "Correct Answer": "sudo apt clean",
+        "Category": "Package Management"
+    },
+    {
+        "Question": "When installing a package using apt, which option ensures that required dependencies are automatically installed?",
+        "Bash script": "",
+        "Answer A": "--auto",
+        "Answer B": "--dependency",
+        "Answer C": "--force",
+        "Answer D": "--yes",
+        "Correct Answer": "--yes",
+        "Category": "Package Management"
+    },
+    {
+        "Question": "What command lists all files installed by an RPM package?",
+        "Bash script": "",
+        "Answer A": "rpm -ql <package>",
+        "Answer B": "rpm -lv <package>",
+        "Answer C": "rpm -ls <package>",
+        "Answer D": "rpm --files <package>",
+        "Correct Answer": "rpm -ql <package>",
+        "Category": "Package Management"
+    },
+    {
+        "Question": "Which command in nano saves the current file?",
+        "Bash script": "",
+        "Answer A": "Ctrl + S",
+        "Answer B": "Ctrl + O",
+        "Answer C": "Ctrl + X",
+        "Answer D": "Ctrl + P",
+        "Correct Answer": "Ctrl + O",
+        "Category": "File Viewing and Editing"
+    },
+    {
+        "Question": "In vim, how do you undo the last change made?",
+        "Bash script": "",
+        "Answer A": "u",
+        "Answer B": "Ctrl + z",
+        "Answer C": ":undo",
+        "Answer D": ":U",
+        "Correct Answer": "u",
+        "Category": "File Viewing and Editing"
+    },
+    {
+        "Question": "Which key combination in vim allows you to exit insert mode and return to command ",
+        "Bash script": "",
+        "Answer A": "Ctrl + Q",
+        "Answer B": "Ctrl + D",
+        "Answer C": "Ctrl + C",
+        "Answer D": "Esc",
+        "Correct Answer": "Esc",
+        "Category": "File Viewing and Editing"
+    },
+    {
+        "Question": "In vim, how do you move to the end of the file?",
+        "Bash script": "",
+        "Answer A": "Ctrl + End",
+        "Answer B": "$",
+        "Answer C": "G",
+        "Answer D": "gg",
+        "Correct Answer": "G",
+        "Category": "File Viewing and Editing"
+    },
+    {
+        "Question": "What does the :q! command do in vim?",
+        "Bash script": "",
+        "Answer A": "Saves changes and exits.",
+        "Answer B": "Forces write to a read-only file.",
+        "Answer C": "Exits without saving changes.",
+        "Answer D": "Quits and saves to a new file.",
+        "Correct Answer": "Exits without saving changes.",
+        "Category": "File Viewing and Editing"
+    },
+    {
+        "Question": "How do you delete an entire line in vim?",
+        "Bash script": "",
+        "Answer A": ":d",
+        "Answer B": "dd",
+        "Answer C": "d$",
+        "Answer D": "D",
+        "Correct Answer": "dd",
+        "Category": "File Viewing and Editing"
+    },
+    {
+        "Question": "Which command in less allows you to search forward for a string?",
+        "Bash script": "",
+        "Answer A": "?",
+        "Answer B": "n",
+        "Answer C": "f",
+        "Answer D": "/",
+        "Correct Answer": "/",
+        "Category": "File Viewing and Editing"
     }
 ]
