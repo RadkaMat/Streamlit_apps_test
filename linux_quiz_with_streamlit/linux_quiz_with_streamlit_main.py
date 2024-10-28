@@ -69,6 +69,11 @@ def display_quiz(question_setx):
             st.rerun()
 
 
+def restart_quiz():
+    st.session_state.quiz_submitted = False
+    st.rerun()
+
+
 # MAIN PART OF THE QUIZ APP
 # Set a session state variable to track if the quiz has been submitted
 if 'quiz_submitted' not in st.session_state:
@@ -118,6 +123,8 @@ if st.session_state.quiz_submitted:
                 st.write(f"The correct answer is: :red[{question_data2['Correct Answer']}]")
 
         # Quiz submission button
-        new_quiz = st.form_submit_button('Submit')
+        new_quiz = st.form_submit_button('Reset quiz')
+        if new_quiz:
+            restart_quiz()
 
 # source: https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes/blob/main/linux/linux-quiz.md
