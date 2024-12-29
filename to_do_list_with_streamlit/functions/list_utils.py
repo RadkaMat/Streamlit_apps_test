@@ -3,7 +3,7 @@ from pandas import DataFrame, RangeIndex
 from datetime import datetime
 
 FILE_PATHS = {'data': r'to_do_list_with_streamlit/to_do_list_data.txt',
-              'history': r'to_do_list_with_streamlit/functions/to_do_list_history.txt'}
+              'history': r'to_do_list_with_streamlit/to_do_list_history.txt'}
 
 
 def get_to_do_list(file_path: str = FILE_PATHS['data']) -> list[str]:
