@@ -44,7 +44,7 @@ def add_new_to_do_logic(to_do_list: list[str], new_to_do: str) -> list[str]:
     """ Add a new to-do item to the list and save it. """
     timestamped_to_do = f"{new_to_do} {datetime.now().strftime('%d. %m. %Y %H:%M')}\n"
     to_do_list.append(timestamped_to_do)
-    save_to_do_list(to_do_list, file_path=FILE_PATHS['default'])
+    save_to_do_list(to_do_list, file_path=FILE_PATHS['data'])
     return to_do_list
 
 
