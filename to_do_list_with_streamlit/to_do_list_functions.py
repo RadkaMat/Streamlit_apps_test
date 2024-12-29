@@ -1,6 +1,6 @@
 import streamlit as st
 
-PATH = r'to_do_list_with_streamlit/to_do_list_result.txt'
+PATH = r'to_do_list_with_streamlit/to_do_list_data.txt'
 PATH_HISTORY = r'to_do_list_with_streamlit/to_do_list_history.txt'
 
 
