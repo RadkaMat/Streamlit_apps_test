@@ -6,7 +6,7 @@ FILE_PATHS = {'data': r'to_do_list_with_streamlit/functions/to_do_list_data.txt'
               'history': r'to_do_list_with_streamlit/functions/to_do_list_history.txt'}
 
 
-def get_to_do_list(file_path: str = FILE_PATHS['default']) -> list[str]:
+def get_to_do_list(file_path: str = FILE_PATHS['data']) -> list[str]:
     """
     Loads and returns a to-do list from the specified file path.
     Ensures that the list does not contain duplicate trailing lines.
@@ -22,7 +22,7 @@ def get_to_do_list(file_path: str = FILE_PATHS['default']) -> list[str]:
     return to_do_list
 
 
-def save_to_do_list(to_do_list: list[str], file_path: str = FILE_PATHS['default'], save_mode='w') -> None:
+def save_to_do_list(to_do_list: list[str], file_path: str = FILE_PATHS['data'], save_mode='w') -> None:
     """
     Saves the to-do list to the specified file.
     - save_mode='w': Overwrites the file.
