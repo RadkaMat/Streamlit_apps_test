@@ -12,8 +12,8 @@ PAGE_BG_STYLE = """
     background-image: url("https://images.unsplash.com/photo-1722082839802-18b18cb23a62");
     background-size: cover;
 }
-.st-emotion-cache-yw8pof ekr3hml4 {
-    background-color: #262626;
+[data-testid="stForm"] {
+    background: #262626;
 }
 </style>
 """
