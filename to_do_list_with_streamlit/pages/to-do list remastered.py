@@ -12,12 +12,7 @@ PAGE_BG_STYLE = """
     background-image: url("https://images.unsplash.com/photo-1722082839802-18b18cb23a62");
     background-size: cover;
 }
-[data-testid="stAppViewBlockContainer"] {<div data-testid="stVerticalBlockBorderWrapper" data-test-scroll-behavior="normal" class="st-emotion-cache-0 eiemyj5"><div class="st-emotion-cache-b95f0i eiemyj4"><div width="704" class="stVerticalBlock st-emotion-cache-1n76uvr eiemyj3" data-testid="stVerticalBlock"><div class="stElementContainer element-container st-emotion-cache-ke1f9q eiemyj1" data-testid="stElementContainer" data-stale="false" width="704"><div class="stMarkdown" data-testid="stMarkdown" style="width: 704px;"><div data-testid="stMarkdownContainer" class="st-emotion-cache-1cvow4s e121c1cl0"><style>
-[data-testid="stAppViewContainer"] {
-background-image: url("https://images.unsplash.com/photo-1722082839802-18b18cb23a62");
-background-size: cover;
-
-[data-testid="stForm"] {
+[data-testid="stAppViewBlockContainer"] {
     background-color: #262626;
 }
 </style>
