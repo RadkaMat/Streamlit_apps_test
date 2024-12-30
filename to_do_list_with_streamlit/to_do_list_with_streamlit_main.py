@@ -27,7 +27,7 @@ page_bg_image = """
 background-image: url("https://images.unsplash.com/photo-1722082839802-18b18cb23a62");
 background-size: cover;
 
-[data-testid="stAppViewBlockContainer"] {
+[data-testid="stMainBlockContainer"] {
 background-color: #262626;
 }
 </style>
