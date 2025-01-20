@@ -75,7 +75,7 @@ st.text_input(label='Write new to-do:',
 st.write(f'The last added to-do: {st.session_state.new_to_do}')
 
 # Export data of the unfinished to-does
-with open('web_app_data/to_do_list_data.txt', 'rb') as txt_file:
+with open('to_do_list_data.txt', 'rb') as txt_file:
     st.download_button(label='Export data 💾',
                        data=txt_file,
                        file_name='to_do_list_data.txt',
