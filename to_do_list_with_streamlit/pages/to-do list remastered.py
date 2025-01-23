@@ -1,5 +1,6 @@
 import streamlit as st
 from sys import path
+from datetime import datetime
 
 # import python module from parent directory
 path.append('../functions')
@@ -52,7 +53,8 @@ with form:
         to_do_list_undone, to_do_list_done = [], []
         for to_do, checked in checkbox_state.items():
             if checked:
-                to_do_list_done.append(to_do)
+                date_now = datetime.now().strftime('%d. %m. %Y %H:%M')
+                to_do_list_done.append(f"{to_do.strip()}, finished on: {date_now}\n")
             else:
                 to_do_list_undone.append(to_do)
 
