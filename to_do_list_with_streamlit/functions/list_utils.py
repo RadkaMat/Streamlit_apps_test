@@ -48,7 +48,7 @@ def add_new_to_do_logic(to_do_list: list[str], new_to_do: str) -> list[str]:
     return to_do_list
 
 
-def export_data(data, file_path):
+def export_data(data: str, file_path: str):
     with open(file_path, 'r') as file:
         st.download_button(label=f"Export {data} 💾",
                            data=file,
