@@ -76,12 +76,9 @@ st.text_input(label='Write new to-do:',
 # Message to write the last added to-do
 st.write(f'The last added to-do: {st.session_state.new_to_do}')
 
-# Export data of the unfinished to-does
-with open('to_do_list_with_streamlit/to_do_list_data.txt', 'rb') as txt_file:
-    st.download_button(label='Export data 💾',
-                       data=txt_file,
-                       file_name='to_do_list_data.txt',
-                       help='Export data of the unfinished to-does in plain text format.')
+# Export data of the finished and unfinished to-does
+list_utils.export_data('data', list_utils.FILE_PATHS['data'])
+list_utils.export_data('history', list_utils.FILE_PATHS['history'])
 
 # Show and download history of the finished to-does
 if st.button('Show history 🕒'):

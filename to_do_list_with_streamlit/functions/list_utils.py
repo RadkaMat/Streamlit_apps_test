@@ -48,6 +48,15 @@ def add_new_to_do_logic(to_do_list: list[str], new_to_do: str) -> list[str]:
     return to_do_list
 
 
+def export_data(data, file_path):
+    with open(file_path, 'r') as file:
+        st.download_button(label=f"Export {data} 💾",
+                           data=file,
+                           file_name=f"to_do_list_{data}.txt",
+                           help=f"Export to-does {data} in plain text format.",
+                           key=f"to_do_list_{data}.txt")
+
+
 def show_to_do_history():
     to_do_list_history = get_to_do_list(file_path=FILE_PATHS['history'])
     data_frame_history = DataFrame(
