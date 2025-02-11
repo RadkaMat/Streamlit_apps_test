@@ -1,4 +1,5 @@
 import streamlit as st
+from st_files_connection import FilesConnection
 import to_do_list_functions as function
 from datetime import datetime
 from pandas import DataFrame, RangeIndex
@@ -14,6 +15,11 @@ def add_new_to_do_on_change():
     st.session_state.new_to_do = st.session_state.new_to_do_widget
     st.session_state.new_to_do_widget = ''
 
+
+# Create connection object and retrieve file contents.
+conn = st.connection('gcs', type=FilesConnection)
+to_do_list_data = conn.read('streamlit-to-do-list', input_format='txt', ttl=600)
+st.write(to_do_list_data)
 
 # Load To-do list and add False value for unfinished to-does.
 to_do_list = function.get_to_do_list()
