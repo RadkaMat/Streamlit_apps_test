@@ -4,7 +4,7 @@ from datetime import datetime
 
 # import python module from parent directory
 path.append('../functions')
-from functions import list_utils, task_utils, render_utils
+from functions.to_do_list_func import list_utils, task_utils, render_utils
 
 # Constants
 PAGE_BG_STYLE = """
@@ -80,7 +80,7 @@ st.write(f'The last added to-do: {st.session_state.new_to_do}')
 list_utils.export_data('data', list_utils.FILE_PATHS['data'])
 list_utils.export_data('history', list_utils.FILE_PATHS['history'])
 
-# Show and download history of the finished to-does
+# Show the history of the finished to-does
 if st.button('Show history 🕒'):
     list_utils.show_to_do_history()
 
