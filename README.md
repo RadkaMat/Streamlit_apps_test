@@ -1,21 +1,18 @@
 <div align="center">
   
-![Python](https://github.com/RadkaMat/application_python/blob/master/pictures_general/python_picture_small.png)
-  
+PYTHON WEB APPS
+- URL for demo: https://python-test-jun-2025.streamlit.app/
 </div>
 
 ## My Python Apps:
 >
-1. **To-do List** - write down your important to-does, btw. why to keep them in mind?
-- URL: https://pythonwebapp-todolist.streamlit.app/
-![Python](https://github.com/RadkaMat/application_python/blob/master/pictures_general/to_do_list_screenshot.PNG)
->
-2. **Knowledge Quiz** - test your Linux knowledge, comment from autor: not very easy difficulty
-- URL: https://pythonwebapp-knowledgequizlinux.streamlit.app/
-![Python](https://github.com/RadkaMat/application_python/blob/master/pictures_general/knowledge_quiz_screenshot2.png)
->
-## My Python Games:
->
-1. **Bulls and Cows** - fill your meadow with 4 bulls by guessing 4-digit number, warning! logic game - comming soon
-- URL for demo: https://applicationpython-mnsmxjcuxumkdppad82odv.streamlit.app/
-3. **Hangman** - guess a secret word before your lives run out - comming soon
+1. **To-do List** - write down your important to-does
+> inspired by Udemy Python course from Ardit Sulce
+2. **To-do List Remastered** - improved To-do List
+> date-sorted to-does, export data, list of finiched to-does
+3. **Hangman** - guess a secret word
+> Guess a world by picking single letters with limited number of attampts
+4. **Bulls and Cows** - guess 4-digit number
+> right digits are cows, right digits on right position are bulls
+5. **Knowledge Quiz** - test your Linux knowledge
+> 8 topics, questions are not sorted by difficulty
