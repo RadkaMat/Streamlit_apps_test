@@ -3,7 +3,7 @@ import json
 
 
 # load quiz data
-def load_quiz_data(pathx=r'linux_quiz_with_streamlit/linux_quiz_data.json'):
+def load_quiz_data(pathx=r'data/linux_quiz_data.json'):
     with open(pathx, 'r') as file_to_read:
         file_content = file_to_read.read()
     quiz_datax = json.loads(file_content)
@@ -17,7 +17,7 @@ def write_question_script(question_script):
 
 
 def save_quiz_data_with_answers(quiz_data_with_answers):
-    with open(r'linux_quiz_with_streamlit/linux_quiz_data_with_answers.json', 'w', encoding='utf-8') as file_to_save:
+    with open(r'data/linux_quiz_data_with_answers.json', 'w', encoding='utf-8') as file_to_save:
         json.dump(quiz_data_with_answers, file_to_save, ensure_ascii=False, indent=4)
 
 
@@ -94,7 +94,7 @@ question_set_picked = st.radio(
 )
 question_set = [item for item in quiz_question_data if item["Category"] == question_set_picked]
 
-st.image('linux_quiz_with_streamlit/Linux_image2.jpg')
+st.image('images/Linux_image2.jpg')
 st.title('Linux knowledge quiz')
 
 if not st.session_state.quiz_submitted:
@@ -102,7 +102,7 @@ if not st.session_state.quiz_submitted:
 
 # Display results after submission
 if st.session_state.quiz_submitted:
-    question_set_with_answers = load_quiz_data(r'linux_quiz_with_streamlit/linux_quiz_data_with_answers.json')
+    question_set_with_answers = load_quiz_data(r'data/linux_quiz_data_with_answers.json')
     st.write('You finished the quiz!')
     with st.form('Linux answers'):
         for index, question_data2 in enumerate(question_set_with_answers):

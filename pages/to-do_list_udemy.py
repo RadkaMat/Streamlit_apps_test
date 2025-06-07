@@ -11,7 +11,7 @@ def add_new_to_do_on_change():
     st.session_state['new_to_do_widget'] = ''
 
 
-st.page_link('main.py', label='Home', icon='🏠')
+st.page_link('home.py', label='Home', icon='🏠')
 st.title('To-Do List 📝')
 
 # Clean New to-do+ widget

@@ -1,10 +1,7 @@
 import streamlit as st
 from sys import path
 from datetime import datetime
-
-# import python module from parent directory
-path.append('../functions')
-from functions.to_do_list_func import list_utils, task_utils, render_utils
+from functions import list_utils, task_utils, render_utils
 
 # Constants
 PAGE_BG_STYLE = """
@@ -32,6 +29,7 @@ def add_new_to_do():
 
 # Initialization
 st.markdown(PAGE_BG_STYLE, unsafe_allow_html=True)
+st.page_link('home.py', label='Home', icon='🏠')
 st.title("To-Do List")
 
 if 'new_to_do' not in st.session_state:

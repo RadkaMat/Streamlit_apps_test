@@ -1,8 +1,8 @@
 from datetime import datetime
 from pandas import DataFrame, RangeIndex
 
-FILE_PATHS = {'data': r'web_app_data/to_do_list_data.txt',
-              'history': r'web_app_data/to_do_list_history.txt'}
+FILE_PATHS = {'data': r'data/to_do_list_data.txt',
+              'history': r'data/to_do_list_history.txt'}
 
 
 def get_to_do_list(file_path: str = FILE_PATHS['data']) -> list[str]:
