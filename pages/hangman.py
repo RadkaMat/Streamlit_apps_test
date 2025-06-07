@@ -40,7 +40,7 @@ def game():
         number_of_lives['text'] -= 1
         lives_emoji['text'] = '\U00002764' * number_of_lives['text']
         global hangman_picture
-        hangman_picture = st.PhotoImage(file=f"images\\hang_{7 - int(number_of_lives['text'])}.png")
+        hangman_picture = st.PhotoImage(file=f"images/hang_{7 - int(number_of_lives['text'])}.png")
         hangman_image['image'] = hangman_picture
 
         if number_of_lives['text'] < 1:
@@ -65,7 +65,7 @@ st.button(label='Lives: ' + '\U00002764' * number_of_lives)
 st.button(label=st.session_state['users_tip'])
 st.button(label=str(word_puzzle))
 st.button(label='Confirm')
-st.image('images\\hang_0.png')
+st.image('images/hang_0.png')
 
 # Alphabet buttons
 alphabet = ['A', 'B', 'C', 'D', 'E', 'F']
